@@ -1,0 +1,6 @@
+# Exclude large source files not needed in production
+data/schemas/*.xlsx
+data/atlas/*.xlsx
+scripts/update-schema-pack-6-items.js
+*.log
+.next/cache

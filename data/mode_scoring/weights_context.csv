@@ -1,0 +1,15 @@
+mode_id,gate_id,delta
+vulnerable_child,intimacy,0.4
+demanding_parent,evaluation,0.25
+punitive_parent,evaluation,0.25
+overcompensator,rule,0.2
+overcompensator,evaluation,0.40
+angry_child,limits,0.3
+bully_attack,limits,0.3
+self_aggrandizer,competition,0.25
+impulsive_undisciplined_child,limits,0.2
+compliant_surrender,intimacy,0.15
+compliant_surrender,evaluation,0.1
+happy_child,intimacy,0.2
+happy_child,evaluation,-0.1
+healthy_adult,evaluation,-0.25

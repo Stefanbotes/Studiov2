@@ -1,0 +1,392 @@
+generator client {
+    provider = "prisma-client-js"
+    binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x"]
+    output = "/home/ubuntu/studio_2_app/nextjs_space/node_modules/.prisma/client"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+// Authentication Models (NextAuth)
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  emailVerified DateTime?
+  image         String?
+  password      String?   // For credentials authentication
+  role          String?   @default("Coach") // Admin, Coach, Master Coach
+  license       String?   // Licensed Psychologist, Executive Coach, etc.
+  organization  String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  accounts         Account[]
+  sessions         Session[]
+  clientProfiles   ClientProfile[]
+  sessionNotes     SessionNote[]
+  auditEvents      AuditEvent[]
+  coachingNotes    CoachingNote[]
+  coachingSessions CoachingSession[]
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model PasswordResetToken {
+  id      String   @id @default(cuid())
+  token   String   @unique
+  email   String
+  expires DateTime
+  used    Boolean  @default(false)
+}
+
+// Core Business Models
+model Organization {
+  id           String   @id @default(cuid())
+  name         String
+  slug         String   @unique
+  description  String?
+  retentionPolicy Int?  @default(2555)  // days
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  
+  engagements  Engagement[]
+  auditEvents  AuditEvent[]
+}
+
+model ClientProfile {
+  id           String   @id @default(cuid())
+  userId       String   // Coach who created this client
+  firstName    String
+  lastName     String
+  email        String?
+  phone        String?
+  role         String?  // Executive role
+  ageRange     String?  // 25-35, 36-45, etc.
+  aspirations  String?  // Career goals, development areas
+  context      Json?    // Structured context data
+  pseudonym    String?  // For privacy
+  isActive     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  
+  user               User               @relation(fields: [userId], references: [id])
+  engagements        Engagement[]
+  assessmentImports  AssessmentImport[]
+  schemaResolutions  SchemaResolution[]
+  coachingNotes      CoachingNote[]
+  coachingSessions   CoachingSession[]
+  
+  @@index([userId])
+}
+
+model Engagement {
+  id          String   @id @default(cuid())
+  orgId       String?
+  clientId    String
+  phase       String   @default("INTAKE") // INTAKE|ACTIVE|REVIEW|CLOSED
+  startedAt   DateTime @default(now())
+  endedAt     DateTime?
+  description String?
+  
+  // Relations
+  organization      Organization?     @relation(fields: [orgId], references: [id])
+  client            ClientProfile     @relation(fields: [clientId], references: [id])
+  plans             Plan[]
+  notes             SessionNote[]
+  imports           AssessmentImport[]
+  events            AuditEvent[]
+  coachingNotes     CoachingNote[]
+  coachingSessions  CoachingSession[]
+  
+  @@index([clientId])
+  @@index([orgId])
+}
+
+model AssessmentImport {
+  id                String   @id @default(cuid())
+  engagementId      String?
+  clientId          String
+  respondentId      String   // From App A export
+  assessmentId      String   // From App A export
+  schemaVersion     String   // From App A export
+  analysisVersion   String   // Mapping at import time
+  completedAt       DateTime
+  objectKey         String   // Object storage key for immutable JSON
+  checksumSha256    String   // File integrity
+  status            String   @default("VALIDATED") // VALIDATED|REJECTED|PROCESSING
+  metadata          Json?    // Additional metadata from import
+  createdAt         DateTime @default(now())
+  
+  // Relations
+  client            ClientProfile @relation(fields: [clientId], references: [id])
+  engagement        Engagement? @relation(fields: [engagementId], references: [id])
+  results           ComputedResult[]
+  
+  @@unique([respondentId, assessmentId, completedAt])
+  @@index([clientId])
+  @@index([engagementId])
+}
+
+model ComputedResult {
+  id                 String   @id @default(cuid())
+  assessmentImportId String
+  engineVersion      String   // Studio's analysis computation version
+  mappingVersion     String   // Mapping table version used
+  schemaScoresJson   Json     // Schema activation scores
+  domainScoresJson   Json     // Domain scores
+  modeScoresJson     Json     // Mode activation scores
+  riskFlagsJson      Json     // Risk indicators
+  computedAt         DateTime @default(now())
+  
+  // Relations
+  import           AssessmentImport @relation(fields: [assessmentImportId], references: [id], onDelete: Cascade)
+  
+  @@index([assessmentImportId])
+}
+
+model Plan {
+  id           String   @id @default(cuid())
+  engagementId String?
+  clientId     String?  // For backward compatibility
+  title        String
+  description  String?
+  version      Int      @default(1)
+  status       String   @default("DRAFT") // DRAFT|ACTIVE|COMPLETED|ARCHIVED
+  focusAreas   Json?    // Development areas
+  interventions Json?   // Planned interventions
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  
+  // Relations
+  engagement   Engagement? @relation(fields: [engagementId], references: [id])
+  items        PlanItem[]
+  
+  @@index([engagementId])
+  @@index([clientId])
+}
+
+model PlanItem {
+  id          String   @id @default(cuid())
+  planId      String
+  title       String
+  description String?
+  dueDate     DateTime?
+  status      String   @default("PENDING") // PENDING|IN_PROGRESS|COMPLETED
+  priority    String   @default("MEDIUM") // LOW|MEDIUM|HIGH
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relations
+  plan        Plan     @relation(fields: [planId], references: [id], onDelete: Cascade)
+  
+  @@index([planId])
+}
+
+model SessionNote {
+  id           String   @id @default(cuid())
+  engagementId String?
+  clientId     String?  // For backward compatibility
+  userId       String   // Coach who created the note
+  title        String?
+  content      String
+  sessionDate  DateTime @default(now())
+  type         String   @default("SESSION") // SESSION|OBSERVATION|PLAN_UPDATE
+  isPrivate    Boolean  @default(false)
+  tags         String   @default("") // Comma-separated tags for SQLite compatibility
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  
+  // Relations
+  engagement   Engagement? @relation(fields: [engagementId], references: [id])
+  user         User        @relation(fields: [userId], references: [id])
+  
+  @@index([engagementId])
+  @@index([clientId])
+  @@index([userId])
+}
+
+model MappingVersion {
+  id           String   @id @default(cuid())
+  name         String
+  version      String
+  tablesBlobKey String  // Points to object store or JSON mapping table
+  description  String?
+  isActive     Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  
+  @@unique([name, version])
+}
+
+model AuditEvent {
+  id          String   @id @default(cuid())
+  orgId       String?
+  engagementId String?
+  actorId     String?  // User who performed the action
+  action      String   // IMPORT|ANALYSIS|PLAN_UPDATE|NOTE_CREATE|EXPORT
+  objectType  String   // CLIENT|ASSESSMENT|PLAN|NOTE
+  objectId    String
+  timestamp   DateTime @default(now())
+  contextJson Json?    // Additional context
+  prevHash    String?  // For tamper-evident chain
+  currHash    String?  // Current hash in the chain
+  ipAddress   String?
+  userAgent   String?
+  
+  // Relations
+  organization Organization? @relation(fields: [orgId], references: [id])
+  engagement   Engagement?   @relation(fields: [engagementId], references: [id])
+  actor        User?         @relation(fields: [actorId], references: [id])
+  
+  @@index([orgId])
+  @@index([engagementId])
+  @@index([actorId])
+  @@index([action])
+  @@index([timestamp])
+}
+
+// Schema Pack Management for Coaching Hub
+model SchemaPackVersion {
+  id              String   @id @default(cuid())
+  version         String   @unique
+  description     String?
+  schemaPackJson  Json     // Complete schema pack data keyed by schema_id
+  buildHash       String   // Hash of source CSVs for integrity
+  isActive        Boolean  @default(false)
+  createdAt       DateTime @default(now())
+  
+  schemaResolutions SchemaResolution[]
+  
+  @@index([isActive])
+}
+
+// Schema Resolution for Coachees 
+model SchemaResolution {
+  id                    String   @id @default(cuid())
+  clientId              String
+  schemaPackVersionId   String
+  primarySchemaId       String   // Resolved primary schema
+  secondarySchemaId     String?  // Resolved secondary schema (optional)
+  confidenceScore       Float?   // Resolution confidence (0-1)
+  resolutionMethod      String   @default("MANUAL") // MANUAL|AUTO|ASSESSMENT_BASED
+  metadata              Json?    // Additional resolution context
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+  
+  // Relations
+  client                ClientProfile      @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  schemaPackVersion     SchemaPackVersion  @relation(fields: [schemaPackVersionId], references: [id])
+  
+  @@unique([clientId, schemaPackVersionId])
+  @@index([clientId])
+  @@index([primarySchemaId])
+  @@index([secondarySchemaId])
+}
+
+// Coaching Notes for DynamicList persistence
+model CoachingNote {
+  id           String   @id @default(cuid())
+  clientId     String
+  userId       String   // Coach who created the note
+  engagementId String?  // Optional engagement context
+  framework    String   // "leadership" | "clinical" | "advanced_insights" | "coaching"
+  section      String   // Section key (e.g., "unmet_need", "core_needs", etc.)
+  subSection   String?  // For coaching tabs (e.g., "coaching_plan", "session_log")
+  content      String   // The note content
+  order        Int      @default(0) // For ordering within section
+  isArchived   Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  
+  // Relations  
+  client       ClientProfile @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  user         User          @relation(fields: [userId], references: [id])
+  engagement   Engagement?   @relation(fields: [engagementId], references: [id])
+  
+  @@index([clientId])
+  @@index([userId])
+  @@index([framework])
+  @@index([section])
+  @@index([engagementId])
+}
+
+// Coaching Session Scheduling
+model CoachingSession {
+  id           String    @id @default(cuid())
+  clientId     String
+  userId       String    // Coach
+  engagementId String?   // Optional engagement context
+  title        String?
+  scheduledAt  DateTime
+  duration     Int?      // Duration in minutes
+  status       String    @default("SCHEDULED") // SCHEDULED|COMPLETED|CANCELLED|RESCHEDULED
+  notes        String?   // Session notes/summary
+  meetingLink  String?   // Video call link
+  location     String?   // Physical or virtual location
+  remindAt     DateTime? // Reminder timestamp
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  
+  // Relations
+  client       ClientProfile @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  user         User          @relation(fields: [userId], references: [id])
+  engagement   Engagement?   @relation(fields: [engagementId], references: [id])
+  
+  @@index([clientId])
+  @@index([userId])
+  @@index([scheduledAt])
+  @@index([status])
+  @@index([engagementId])
+}
+
+// Mode Library for Schema Therapy
+model Mode {
+  id              String   @id @default(cuid())
+  modeId          String   @unique  // e.g., "vulnerable_child"
+  name            String   // e.g., "Vulnerable Child"
+  type            String   // e.g., "Child", "Coping", "Dysfunctional Parent", "Adaptive"
+  linkedSchemas   String[] @default([])  // Array of schema IDs
+  copingStrategy  String   // Description of coping strategy/expression
+  category        String   // e.g., "child_modes", "coping_modes", "parent_modes"
+  isAdaptive      Boolean  @default(false)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  @@index([category])
+  @@index([type])
+}

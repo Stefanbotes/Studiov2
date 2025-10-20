@@ -1,0 +1,532 @@
+{
+  "participant": {
+    "name": "test2 T",
+    "email": "test@test.com",
+    "org": null,
+    "title": "Manager",
+    "overall": {
+      "label": "PUNITIVENESS SCHEMA",
+      "variant": "moderate"
+    },
+    "nextSession": "TBD"
+  },
+  "leadership": {
+    "primary": {
+      "unmet_need": "Forgiveness and flexibility",
+      "surrender_behavior": "Harsh self-punishment",
+      "avoidance_behavior": "Avoids judgment situations",
+      "overcompensation_behavior": "Harshly criticizes others",
+      "maladaptive_modes": [
+        "Punitive Parent, Harsh Enforcer"
+      ],
+      "leadership_persona": "The Fair-Minded Leader",
+      "healthy_persona": "The Fair-Minded Leader",
+      "leadership_behavior_markers": [
+        "Rigid, punishing tone"
+      ],
+      "impact_on_team": [
+        "Fear culture"
+      ],
+      "decision_making_style": "Strict, intolerant",
+      "lios_interpretation": "OS Glitch: Error-handling set to punish mode. Upgrade: Switch to learning-oriented error recovery.",
+      "growth_levers": [
+        null
+      ]
+    },
+    "secondary": {
+      "unmet_need": "Secure attachment and emotional stability",
+      "surrender_behavior": "Clings to dominant leaders",
+      "avoidance_behavior": "Avoids emotional closeness with team",
+      "overcompensation_behavior": "Overly controlling to keep people close",
+      "maladaptive_modes": [
+        "Anxious Pleaser, Detached Protector, Controlling Overlord"
+      ],
+      "leadership_persona": "The Relationship Champion",
+      "healthy_persona": "The Trust Builder",
+      "leadership_behavior_markers": [
+        "Over-communicates, micromanages relationships, anxious"
+      ],
+      "impact_on_team": [
+        "Creates dependency or tension"
+      ],
+      "decision_making_style": "Emotionally driven, struggles with delegation",
+      "lios_interpretation": "OS Glitch: Constant scanning for rejection drains processing power. Upgrade: Trust team autonomy, reduce monitoring loops.",
+      "growth_levers": [
+        null
+      ]
+    },
+    "tertiary": {
+      "unmet_need": "Authenticity and self-worth",
+      "surrender_behavior": "Adapts to please",
+      "avoidance_behavior": "Avoids genuine views",
+      "overcompensation_behavior": "Chases praise",
+      "maladaptive_modes": [
+        "Approval-Seeking Child, Image Manager"
+      ],
+      "leadership_persona": "The Authentic Leader",
+      "healthy_persona": "The Authentic Leader",
+      "leadership_behavior_markers": [
+        "Image-conscious, inconsistent"
+      ],
+      "impact_on_team": [
+        "Uncertain values"
+      ],
+      "decision_making_style": "Seeks popular approval",
+      "lios_interpretation": "OS Glitch: External validation server dependency. Upgrade: Switch to internal self-worth database.",
+      "growth_levers": [
+        null
+      ]
+    }
+  },
+  "clinical": {
+    "primary": {
+      "Core_Needs_Frustrated": [
+        "Compassion; forgiveness; contextualized morality"
+      ],
+      "Typical_Developmental_Window": "Middle childhood (7–12)",
+      "Attachment_Correlates": [
+        "Avoidant or Disorganized"
+      ],
+      "Developmental_Pathways": [
+        "Harsh discipline; low warmth; black-and-white morality"
+      ],
+      "Neurocognitive_Correlates": [
+        "Elevated dlPFC rule enforcement; reduced vmPFC compassion valuation; decreased temporoparietal mentalizing for offenders"
+      ],
+      "Memory_Systems": [
+        "Moral violation exemplars overrepresented"
+      ],
+      "Regulatory_Profile": "Low tolerance for mistakes (self/other)",
+      "Maintaining_Biases": [
+        "Fundamental attribution error; retributive justice bias"
+      ],
+      "Testable_Predictions": [
+        "Preference for punitive sanctions in vignettes; reduced neural markers of forgiveness after apologies"
+      ],
+      "Primary_Thought": "Mistakes must be punished.",
+      "Primary_Emotion": "Cold anger/indignation; moral disgust.",
+      "Primary_Belief": "People should be harshly held to account; forgiveness is weakness.",
+      "Primary_Bodily_Anchor": "Rigid posture; narrowed eyes; jaw clench.",
+      "Recognized_Variants": [
+        "Self-punitiveness; other-focused retribution; moral absolutism."
+      ],
+      "Mode_Surrender": [
+        "Harsh self-talk; self-penalizing behaviors."
+      ],
+      "Mode_Avoidance": [
+        "Avoids forgiving/nuanced contexts; shuns ambivalence."
+      ],
+      "Mode_Overcompensation": [
+        "Moralizing; punitive enforcement toward others; public shaming."
+      ],
+      "Key_Moderators": [
+        "Perceived fairness violations; deontological priming; stress/anger states."
+      ],
+      "Core_Threat_Signal": "Tolerance of human error feels dangerous/immoral; fear of leniency.",
+      "Primary_Defenses(Base-Rate)": [
+        "Projection of badness; Reaction formation (harshness vs tenderness); Displacement; Splitting (good/bad); Devaluation; Identification with punitive object; Rationalization (moralizing)."
+      ],
+      "Surrender_Mode_Defenses": [
+        "Harsh self-punishment; Self-criticism; Asceticism."
+      ],
+      "Avoidance_Mode_Defenses": [
+        "Avoids forgiving contexts; Isolation of mitigating affects."
+      ],
+      "Overcompensation_Mode_Defenses": [
+        "Public shaming; Retributive control; Devaluation of transgressors."
+      ],
+      "Vaillant_Levels_Typically_Engaged": [
+        "Immature (projection, devaluation); Neurotic (displacement, reaction formation, isolation); Low mature defenses unless tempered by compassion practices."
+      ],
+      "Defensive_Function(Anxiety_Avoided)": "Converts vulnerability/ambivalence into moral certainty and control.",
+      "Notes/Discriminators": "QA ANALYSIS: 2025-09-11T06:47:28.384Z | Leadership Assessment Schema-Based Inventory (LASBI) v2025.09 | Primary: punitiveness (T60) | Confidence: 70.0% | Atlas-validated"
+    },
+    "secondary": {
+      "Core_Needs_Frustrated": [
+        "Secure attachment; reliability; stable care"
+      ],
+      "Typical_Developmental_Window": "Infancy–early childhood (0–6)",
+      "Attachment_Correlates": [
+        "Anxious-preoccupied > Disorganized"
+      ],
+      "Developmental_Pathways": [
+        "Inconsistent caregiving, frequent separations, caregiver volatility"
+      ],
+      "Neurocognitive_Correlates": [
+        "Hyperreactive amygdala to social threat; reduced vmPFC/ACC downregulation; heightened salience network; elevated HPA reactivity"
+      ],
+      "Memory_Systems": [
+        "Implicit affective memory dominance; strong state-dependent encoding; overgeneral autobiographical memory"
+      ],
+      "Regulatory_Profile": "High threat vigilance; rapid alarm, slow safety learning; extinction recall deficits",
+      "Maintaining_Biases": [
+        "Catastrophizing abandonment, selective attention to cues of loss, confirmation bias in relationships"
+      ],
+      "Testable_Predictions": [
+        "Exaggerated startle to rejection primes; slower fear extinction to abandonment-related CS; increased amygdala–insula coupling under social exclusion"
+      ],
+      "Primary_Thought": "This won’t last; they’ll leave or change.",
+      "Primary_Emotion": "Anxious sadness (high arousal, negative valence).",
+      "Primary_Belief": "People are unreliable; closeness is precarious.",
+      "Primary_Bodily_Anchor": "Chest constriction, breath shallowing, startle-prone.",
+      "Recognized_Variants": [
+        "Protest-anger; numb detachment after overload."
+      ],
+      "Mode_Surrender": [
+        "Clinging, reassurance-seeking, hypervigilance to separation cues."
+      ],
+      "Mode_Avoidance": [
+        "Emotional distancing; self-sufficiency to pre-empt loss."
+      ],
+      "Mode_Overcompensation": [
+        "Testing/controlling others, jealousy, demands for proof."
+      ],
+      "Key_Moderators": [
+        "Partner reliability signals; separation/absence primes; attachment security."
+      ],
+      "Core_Threat_Signal": "Loss of attachment/reliability; imminent separation.",
+      "Primary_Defenses(Base-Rate)": [
+        "Idealization ↔ Devaluation; Splitting; Denial/Minimization of separation risk; Projection; Acting out; Regression."
+      ],
+      "Surrender_Mode_Defenses": [
+        "Denial, Minimization, Clinging/regression; Introjection of rejecting other (self-blame)."
+      ],
+      "Avoidance_Mode_Defenses": [
+        "Withdrawal; Isolation of affect; Dissociation; Suppression; Intellectualization of impermanence."
+      ],
+      "Overcompensation_Mode_Defenses": [
+        "Projective identification (testing); Controlling/omnipotence; Devaluation; Reaction formation (counter-dependence)."
+      ],
+      "Vaillant_Levels_Typically_Engaged": [
+        "Immature (idealization, devaluation, projection, acting out); Neurotic (dissociation, intellectualization, repression); Mature (anticipation, suppression) in secure contexts."
+      ],
+      "Defensive_Function(Anxiety_Avoided)": "Averts separation panic and helplessness; restores predictability via control or numbing.",
+      "Notes/Discriminators": "QA ANALYSIS: Secondary abandonment_instability (T53) | Atlas-validated"
+    },
+    "tertiary": {
+      "Core_Needs_Frustrated": [
+        "Stable self-worth; authentic identity"
+      ],
+      "Typical_Developmental_Window": "Adolescence (12–18)",
+      "Attachment_Correlates": [
+        "Anxious-preoccupied"
+      ],
+      "Developmental_Pathways": [
+        "Social comparison emphasis; contingent praise; performance culture"
+      ],
+      "Neurocognitive_Correlates": [
+        "Enhanced ventral striatal response to social approval; heightened mPFC/precuneus self-consciousness"
+      ],
+      "Memory_Systems": [
+        "Reinforced link between worth and approval cues"
+      ],
+      "Regulatory_Profile": "Externalized valuation; instability under rejection",
+      "Maintaining_Biases": [
+        "Popularity heuristic; conformity bias"
+      ],
+      "Testable_Predictions": [
+        "Strong approach to like/retweet cues; larger feedback-related negativity to social disapproval"
+      ],
+      "Primary_Thought": "Do they like me? Am I impressive?",
+      "Primary_Emotion": "Anticipatory anxiety; pleasure spikes with approval.",
+      "Primary_Belief": "Self-worth depends on others’ evaluations.",
+      "Primary_Bodily_Anchor": "Facial alertness; breath holding; HR spikes with feedback.",
+      "Recognized_Variants": [
+        "Status-seeking; likability-seeking; image management."
+      ],
+      "Mode_Surrender": [
+        "Chameleon behavior; agrees/conforms to audience."
+      ],
+      "Mode_Avoidance": [
+        "Avoids risky authenticity; avoids dissent and exposure to rejection."
+      ],
+      "Mode_Overcompensation": [
+        "Grandstanding; attention-capturing stunts; self-promotion."
+      ],
+      "Key_Moderators": [
+        "Audience size/status; social media metrics; explicit rejection/acceptance cues."
+      ],
+      "Core_Threat_Signal": "Rejection, loss of status/esteem; negative evaluation.",
+      "Primary_Defenses(Base-Rate)": [
+        "Reaction formation (agreeableness/compliance); Idealization of evaluators; Identification; Suppression of dissent; Splitting public vs private self."
+      ],
+      "Surrender_Mode_Defenses": [
+        "Chameleon behavior; Flattery; Conformity."
+      ],
+      "Avoidance_Mode_Defenses": [
+        "Avoids authentic expression; Isolation of affect around disagreement."
+      ],
+      "Overcompensation_Mode_Defenses": [
+        "Grandstanding; Exhibitionism; Devaluation of critics; Rationalization of image tactics."
+      ],
+      "Vaillant_Levels_Typically_Engaged": [
+        "Immature (idealization, devaluation); Neurotic (reaction formation, identification, isolation); Mature (humor) when flexible."
+      ],
+      "Defensive_Function(Anxiety_Avoided)": "Guards self-worth contingent on others’ approval.",
+      "Notes/Discriminators": "QA ANALYSIS: Tertiary approval_seeking_recognition_seeking (T53) | Atlas-validated"
+    }
+  },
+  "coaching_process": {
+    "coaching_plan": [
+      "QA SCHEMA-FOCUSED COACHING: PUNITIVENESS",
+      "Primary development: Core leadership patterns",
+      "Secondary focus: abandonment_instability",
+      "Tertiary consideration: approval_seeking_recognition_seeking",
+      "Clinical confidence: MODERATE (70.0%)",
+      "Analysis version: QA Bridge v2.1.0"
+    ],
+    "session_log": [
+      "QA ANALYSIS IMPORT: 2025-09-11T06:47:28.384Z",
+      "Instrument: Leadership Assessment Schema-Based Inventory (LASBI) v2025.09",
+      "PRIMARY SCHEMA: PUNITIVENESS (T60)",
+      "SECONDARY SCHEMA: ABANDONMENT INSTABILITY (T53)",
+      "TERTIARY SCHEMA: APPROVAL SEEKING RECOGNITION SEEKING (T53)",
+      "CONFIDENCE: 70.0% (MODERATE)",
+      "TIE-BREAKERS: higher_tscore, lexicographic_canonical_id, higher_tscore, lexicographic_canonical_id",
+      "Primary schema: punitiveness (T60) selected from 1 candidates",
+      "Single primary candidate, no tie-breakers needed",
+      "Secondary schema: abandonment_instability (T53) selected from 4 candidates",
+      "Applied higher_tscore: 4 → 3 candidates",
+      "Applied lexicographic_canonical_id: 3 → 1 candidates",
+      "Tertiary schema: approval_seeking_recognition_seeking (T53) selected from 3 candidates",
+      "Applied higher_tscore: 3 → 2 candidates",
+      "Applied lexicographic_canonical_id: 2 → 1 candidates"
+    ],
+    "additional_insights": [
+      "Assessment processing completed with deterministic QA pipeline",
+      "Schema selection used clinical thresholds: Primary ≥T60, Secondary ≥T55 (Δ≤7), Tertiary ≥T50 (Δ≤12)",
+      "LIOS Framework: OS Glitch: Error-handling set to punish mode. Upgrade: Switch to learning-oriented error recovery.",
+      "All content validated against atlas requirements - no fallback data used"
+    ]
+  },
+  "analysis_lineage": {
+    "schema_pack_version": "v1757859662072",
+    "schema_pack_hash": "8b777c70a697558eba131643a27d3613b697698819103c3c353209fc869f4795",
+    "analysis_version": "bridge@2.1.0",
+    "instrument": {
+      "name": "Leadership Assessment Schema-Based Inventory (LASBI)",
+      "version": "2025.09"
+    },
+    "scoring_params": {
+      "thresholds": {
+        "PRIMARY_MIN": 60,
+        "SECONDARY_MIN": 50,
+        "TERTIARY_MIN": 50,
+        "MAX_SECONDARY_DELTA": 12,
+        "MAX_TERTIARY_DELTA": 15
+      },
+      "tie_rules": [
+        "higher_tscore",
+        "lexicographic_canonical_id",
+        "higher_tscore",
+        "lexicographic_canonical_id"
+      ],
+      "normalization_config": "default"
+    },
+    "processed_at": "2025-10-12T19:40:19.534Z",
+    "processing_duration_ms": 3,
+    "primary_id": "punitiveness",
+    "secondary_id": "abandonment_instability",
+    "tertiary_id": "approval_seeking_recognition_seeking",
+    "schema_rankings": [
+      {
+        "schemaId": "punitiveness",
+        "tscore": 60,
+        "percentile": 75,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 1,
+        "is_primary": true,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "abandonment_instability",
+        "tscore": 53,
+        "percentile": 57,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 2,
+        "is_primary": false,
+        "is_secondary": true,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "insufficient_self_control_discipline",
+        "tscore": 53,
+        "percentile": 57,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 3,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "approval_seeking_recognition_seeking",
+        "tscore": 53,
+        "percentile": 57,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 4,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": true
+      },
+      {
+        "schemaId": "negativity_pessimism",
+        "tscore": 50,
+        "percentile": 50,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 5,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "emotional_deprivation",
+        "tscore": 47,
+        "percentile": 43,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 6,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "entitlement_grandiosity",
+        "tscore": 47,
+        "percentile": 43,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 7,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "subjugation",
+        "tscore": 47,
+        "percentile": 43,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 8,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "self_sacrifice",
+        "tscore": 47,
+        "percentile": 43,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 9,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "unrelenting_standards_hypercriticalness",
+        "tscore": 47,
+        "percentile": 43,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 10,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "defectiveness_shame",
+        "tscore": 43,
+        "percentile": 33,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 11,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "dependence_incompetence",
+        "tscore": 43,
+        "percentile": 33,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 12,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "vulnerability_to_harm_illness",
+        "tscore": 43,
+        "percentile": 33,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 13,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "emotional_inhibition",
+        "tscore": 43,
+        "percentile": 33,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 14,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "mistrust_abuse",
+        "tscore": 40,
+        "percentile": 25,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 15,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "social_isolation_alienation",
+        "tscore": 40,
+        "percentile": 25,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 16,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "enmeshment_undeveloped_self",
+        "tscore": 37,
+        "percentile": 18,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 17,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "failure",
+        "tscore": 37,
+        "percentile": 18,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 18,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      }
+    ]
+  }
+}

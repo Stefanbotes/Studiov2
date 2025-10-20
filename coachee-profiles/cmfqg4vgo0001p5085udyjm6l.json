@@ -1,0 +1,412 @@
+{
+  "participant": {
+    "name": "Spencer-Rae  Kerr",
+    "email": "spencer.kerr1@gmail.com",
+    "org": null,
+    "title": null,
+    "overall": {
+      "label": "ENTITLEMENT GRANDIOSITY SCHEMA",
+      "variant": "low"
+    },
+    "nextSession": "TBD"
+  },
+  "leadership": {
+    "primary": {
+      "unmet_need": "Realistic limits and mutual respect",
+      "surrender_behavior": "Expects special treatment",
+      "avoidance_behavior": "Evades accountability",
+      "overcompensation_behavior": "Acts superior, demands loyalty",
+      "maladaptive_modes": [
+        "Self-Aggrandizer, Bully/Attack"
+      ],
+      "leadership_persona": "The Power Broker",
+      "healthy_persona": "The Accountable Leader",
+      "leadership_behavior_markers": [
+        "Dominant, dismissive of rules"
+      ],
+      "impact_on_team": [
+        "Resentment and fear"
+      ],
+      "decision_making_style": "Autocratic",
+      "lios_interpretation": "OS Glitch: Elevated admin privileges override collaboration protocols. Upgrade: Rebalance permissions, enable equal user rights.",
+      "growth_levers": [
+        null
+      ]
+    },
+    "secondary": {
+      "unmet_need": "Freedom and assertiveness",
+      "surrender_behavior": "Always complies",
+      "avoidance_behavior": "Avoids conflict",
+      "overcompensation_behavior": "Passive-aggressive control",
+      "maladaptive_modes": [
+        "Compliant Surrenderer, Resentful Protector"
+      ],
+      "leadership_persona": "The Suppressed Voice",
+      "healthy_persona": "The Assertive Advocate",
+      "leadership_behavior_markers": [
+        "Conflict-avoidant, compliant"
+      ],
+      "impact_on_team": [
+        "Lack of clarity"
+      ],
+      "decision_making_style": "Defers hard calls",
+      "lios_interpretation": "OS Glitch: Voice command function muted. Upgrade: Activate assertiveness protocol, balance power distribution.",
+      "growth_levers": [
+        null
+      ]
+    }
+  },
+  "clinical": {
+    "primary": {
+      "Core_Needs_Frustrated": [
+        "Realistic limits; reciprocity; equality"
+      ],
+      "Typical_Developmental_Window": "Toddlerhood–early childhood (2–6)",
+      "Attachment_Correlates": [
+        "Insecure (variable)"
+      ],
+      "Developmental_Pathways": [
+        "Overindulgence; lack of boundaries; modeling of dominance"
+      ],
+      "Neurocognitive_Correlates": [
+        "Elevated reward sensitivity (ventral striatum); reduced TPJ perspectivetaking; diminished ACC empathy-related conflict signals"
+      ],
+      "Memory_Systems": [
+        "Semantic self-enhancement scripts"
+      ],
+      "Regulatory_Profile": "Impulsivity; dominance seeking",
+      "Maintaining_Biases": [
+        "Self-serving bias; moral licensing"
+      ],
+      "Testable_Predictions": [
+        "Reduced prosocial choices in dictator games; attenuated neural response to others’ pain cues"
+      ],
+      "Primary_Thought": "Rules don’t apply to me.",
+      "Primary_Emotion": "Irritation/anger when thwarted; elation at dominance.",
+      "Primary_Belief": "I deserve more/special treatment.",
+      "Primary_Bodily_Anchor": "Expanded posture; high energy; jaw thrust.",
+      "Recognized_Variants": [
+        "Narcissistic pride; spoiled petulance."
+      ],
+      "Mode_Surrender": [
+        "Insists on exceptions; expects deference."
+      ],
+      "Mode_Avoidance": [
+        "Avoids equalizing contexts; exits when challenged."
+      ],
+      "Mode_Overcompensation": [
+        "Dominance/exploitation; contempt; punitive control."
+      ],
+      "Key_Moderators": [
+        "Power asymmetries; status cues; accountability/transparency."
+      ],
+      "Core_Threat_Signal": "Threat to superiority/special status; limits on desire.",
+      "Primary_Defenses(Base-Rate)": [
+        "Narcissistic grandiosity; Omnipotence; Denial; Idealization/Devaluation; Projection of blame; Rationalization."
+      ],
+      "Surrender_Mode_Defenses": [
+        "Insistence on exceptions; Rationalizations for privilege."
+      ],
+      "Avoidance_Mode_Defenses": [
+        "Exit when challenged; Avoid equalizing contexts; Contempt withdrawal."
+      ],
+      "Overcompensation_Mode_Defenses": [
+        "Exploitation; Dominance; Projective identification; Moralizing to justify control."
+      ],
+      "Vaillant_Levels_Typically_Engaged": [
+        "Immature (idealization, devaluation, denial, projection); Neurotic (rationalization); Rare mature (humor) when flexible."
+      ],
+      "Defensive_Function(Anxiety_Avoided)": "Shields against shame and ordinary dependency.",
+      "Notes/Discriminators": "QA ANALYSIS: 2025-09-18T16:10:50Z | LASBI v2025.09 | Primary: entitlement_grandiosity (T57) | Confidence: 0.0% | Atlas-validated"
+    },
+    "secondary": {
+      "Core_Needs_Frustrated": [
+        "Autonomy; equitable power"
+      ],
+      "Typical_Developmental_Window": "Early–middle childhood (4–10)",
+      "Attachment_Correlates": [
+        "Anxious-preoccupied"
+      ],
+      "Developmental_Pathways": [
+        "Authoritarian control; coercive dynamics"
+      ],
+      "Neurocognitive_Correlates": [
+        "Heightened amygdala to dominance cues; increased PAG/defensive circuitry; reduced assertive action-value coding"
+      ],
+      "Memory_Systems": [
+        "Coercion episodes dominate recall"
+      ],
+      "Regulatory_Profile": "Appeasement; submission",
+      "Maintaining_Biases": [
+        "External control expectancies; threat overestimation for dissent"
+      ],
+      "Testable_Predictions": [
+        "Bias toward compliant choices under social pressure; elevated startle to authority primes"
+      ],
+      "Primary_Thought": "Saying no is dangerous.",
+      "Primary_Emotion": "Fear with smoldering resentment.",
+      "Primary_Belief": "Others hold power; I must comply to stay safe.",
+      "Primary_Bodily_Anchor": "Collapsed posture; shallow breathing; throat tightness.",
+      "Recognized_Variants": [
+        "Fawn response; passive submission with hidden anger."
+      ],
+      "Mode_Surrender": [
+        "Complies; silences needs; appeases authority."
+      ],
+      "Mode_Avoidance": [
+        "Avoids conflict/authority exposure; sidesteps decision points."
+      ],
+      "Mode_Overcompensation": [
+        "Rebellious outbursts; passive-aggression; covert control strategies."
+      ],
+      "Key_Moderators": [
+        "Authority presence; threat of punishment; material dependency."
+      ],
+      "Core_Threat_Signal": "Retaliation/abandonment if asserting needs.",
+      "Primary_Defenses(Base-Rate)": [
+        "Compliance/fawning; Introjection of dominant other; Dissociation of anger; Passive aggression; Displacement to safe targets."
+      ],
+      "Surrender_Mode_Defenses": [
+        "Yielding/appeasement; Self-silencing; Somatic compliance."
+      ],
+      "Avoidance_Mode_Defenses": [
+        "Avoids conflict/authority; Intellectualization to justify compliance."
+      ],
+      "Overcompensation_Mode_Defenses": [
+        "Rebellious outbursts; Covert control; Sarcasm (passive aggression)."
+      ],
+      "Vaillant_Levels_Typically_Engaged": [
+        "Immature (passive aggression, introjection); Neurotic (isolation/dissociation); Mature (suppression) for strategic restraint."
+      ],
+      "Defensive_Function(Anxiety_Avoided)": "Avoids threat of punishment or loss of attachment.",
+      "Notes/Discriminators": "QA ANALYSIS: Secondary subjugation (T57) | Atlas-validated"
+    }
+  },
+  "coaching_process": {
+    "coaching_plan": [
+      "QA SCHEMA-FOCUSED COACHING: ENTITLEMENT GRANDIOSITY",
+      "Primary development: Core leadership patterns",
+      "Secondary focus: subjugation",
+      "Clinical confidence: LOW (0.0%)",
+      "Analysis version: QA Bridge v2.1.0"
+    ],
+    "session_log": [
+      "QA ANALYSIS IMPORT: 2025-09-18T16:10:50Z",
+      "Instrument: LASBI v2025.09",
+      "PRIMARY SCHEMA: ENTITLEMENT GRANDIOSITY (T57)",
+      "SECONDARY SCHEMA: SUBJUGATION (T57)",
+      "CONFIDENCE: 0.0% (LOW)",
+      "TIE-BREAKERS: None required",
+      "No primary schema found: highest score was T57 (< T60 threshold)",
+      "Descriptive fallback: exploratory primary entitlement_grandiosity (T57), exploratory secondary subjugation (T57)"
+    ],
+    "additional_insights": [
+      "Assessment processing completed with deterministic QA pipeline",
+      "Schema selection used clinical thresholds: Primary ≥T57, Secondary ≥T55, Δ≤7",
+      "LIOS Framework: OS Glitch: Elevated admin privileges override collaboration protocols. Upgrade: Rebalance permissions, enable equal user rights.",
+      "All content validated against atlas requirements - no fallback data used"
+    ]
+  },
+  "analysis_lineage": {
+    "schema_pack_version": "v1757859662072",
+    "schema_pack_hash": "8b777c70a697558eba131643a27d3613b697698819103c3c353209fc869f4795",
+    "analysis_version": "bridge@2.1.0",
+    "instrument": {
+      "name": "LASBI",
+      "version": "2025.09"
+    },
+    "scoring_params": {
+      "thresholds": {
+        "PRIMARY_MIN": 60,
+        "SECONDARY_MIN": 50,
+        "MAX_SECONDARY_DELTA": 12
+      },
+      "tie_rules": [],
+      "normalization_config": "default"
+    },
+    "processed_at": "2025-09-19T18:20:19.112Z",
+    "processing_duration_ms": 11,
+    "schema_rankings": [
+      {
+        "schemaId": "entitlement_grandiosity",
+        "tscore": 57,
+        "percentile": 68,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 1,
+        "is_primary": true,
+        "is_secondary": false
+      },
+      {
+        "schemaId": "subjugation",
+        "tscore": 57,
+        "percentile": 68,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 2,
+        "is_primary": false,
+        "is_secondary": true
+      },
+      {
+        "schemaId": "mistrust_abuse",
+        "tscore": 53,
+        "percentile": 57,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 3,
+        "is_primary": false,
+        "is_secondary": false
+      },
+      {
+        "schemaId": "insufficient_self_control_discipline",
+        "tscore": 53,
+        "percentile": 57,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 4,
+        "is_primary": false,
+        "is_secondary": false
+      },
+      {
+        "schemaId": "emotional_inhibition",
+        "tscore": 53,
+        "percentile": 57,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 5,
+        "is_primary": false,
+        "is_secondary": false
+      },
+      {
+        "schemaId": "enmeshment_undeveloped_self",
+        "tscore": 50,
+        "percentile": 50,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 6,
+        "is_primary": false,
+        "is_secondary": false
+      },
+      {
+        "schemaId": "defectiveness_shame",
+        "tscore": 47,
+        "percentile": 43,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 7,
+        "is_primary": false,
+        "is_secondary": false
+      },
+      {
+        "schemaId": "social_isolation_alienation",
+        "tscore": 47,
+        "percentile": 43,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 8,
+        "is_primary": false,
+        "is_secondary": false
+      },
+      {
+        "schemaId": "self_sacrifice",
+        "tscore": 47,
+        "percentile": 43,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 9,
+        "is_primary": false,
+        "is_secondary": false
+      },
+      {
+        "schemaId": "negativity_pessimism",
+        "tscore": 47,
+        "percentile": 43,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 10,
+        "is_primary": false,
+        "is_secondary": false
+      },
+      {
+        "schemaId": "emotional_deprivation",
+        "tscore": 43,
+        "percentile": 33,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 11,
+        "is_primary": false,
+        "is_secondary": false
+      },
+      {
+        "schemaId": "failure",
+        "tscore": 43,
+        "percentile": 33,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 12,
+        "is_primary": false,
+        "is_secondary": false
+      },
+      {
+        "schemaId": "unrelenting_standards_hypercriticalness",
+        "tscore": 43,
+        "percentile": 33,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 13,
+        "is_primary": false,
+        "is_secondary": false
+      },
+      {
+        "schemaId": "abandonment_instability",
+        "tscore": 40,
+        "percentile": 25,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 14,
+        "is_primary": false,
+        "is_secondary": false
+      },
+      {
+        "schemaId": "dependence_incompetence",
+        "tscore": 40,
+        "percentile": 25,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 15,
+        "is_primary": false,
+        "is_secondary": false
+      },
+      {
+        "schemaId": "approval_seeking_recognition_seeking",
+        "tscore": 40,
+        "percentile": 25,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 16,
+        "is_primary": false,
+        "is_secondary": false
+      },
+      {
+        "schemaId": "punitiveness",
+        "tscore": 40,
+        "percentile": 25,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 17,
+        "is_primary": false,
+        "is_secondary": false
+      },
+      {
+        "schemaId": "vulnerability_to_harm_illness",
+        "tscore": 37,
+        "percentile": 18,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 18,
+        "is_primary": false,
+        "is_secondary": false
+      }
+    ]
+  }
+}

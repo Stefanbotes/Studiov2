@@ -1,0 +1,463 @@
+
+{
+  "participant": {
+    "name": "Ingra Du Buisson Narsai",
+    "email": "ingra@neurocapital.com",
+    "org": "Neurocapital",
+    "title": "Founder & CEO",
+    "overall": {
+      "label": "MODERATE - Complex dual pattern detected",
+      "variant": "moderate"
+    },
+    "nextSession": "2025-09-21"
+  },
+  "leadership": {
+    "primary": {
+      "unmet_need": "Recognition and acknowledgment of exceptional capabilities and achievements from peers and authority figures",
+      "surrender_behavior": "Withdraws into isolation, becomes passive and disengaged when criticism occurs",
+      "avoidance_behavior": "Avoids high-stakes presentations and challenging conversations with senior stakeholders",
+      "overcompensation_behavior": "Becomes overly aggressive in defending ideas, micromanages team members, seeks control through perfectionism",
+      "maladaptive_modes": [
+        "Punitive Controller",
+        "Detached Self-Soother",
+        "Grandiose Self-Promoter"
+      ],
+      "leadership_persona": "The Demanding Perfectionist",
+      "healthy_persona": "The Inspiring Visionary",
+      "leadership_behavior_markers": [
+        "Sets unrealistic standards for team",
+        "Difficulty delegating important tasks",
+        "Becomes defensive when questioned",
+        "Alternates between high engagement and withdrawal"
+      ],
+      "impact_on_team": [
+        "Team members report walking on eggshells",
+        "High turnover in direct reports",
+        "Innovation stifled by fear of criticism",
+        "Talented individuals avoid challenging assignments"
+      ],
+      "decision_making_style": "Tends to make unilateral decisions when under pressure, seeks extensive validation for major choices",
+      "lios_interpretation": "Strong drive for excellence coupled with vulnerability to criticism creates cyclical pattern of high performance followed by withdrawal",
+      "growth_levers": [
+        "Develop emotional regulation skills for handling criticism",
+        "Practice vulnerable leadership and asking for help",
+        "Create structured feedback processes with team",
+        "Build self-compassion practices to reduce internal pressure"
+      ]
+    },
+    "secondary": {
+      "unmet_need": "Emotional safety and unconditional acceptance within professional relationships",
+      "surrender_behavior": "Becomes overly accommodating, sacrifices own needs to maintain harmony",
+      "avoidance_behavior": "Avoids conflicts and difficult conversations that might strain relationships",
+      "overcompensation_behavior": "Over-invests in people-pleasing behaviors, works excessive hours to prove worth",
+      "maladaptive_modes": [
+        "Self-Sacrificing Caretaker",
+        "Compliant Surrenderer"
+      ],
+      "leadership_persona": "The Anxious Harmonizer",
+      "healthy_persona": "The Collaborative Builder",
+      "leadership_behavior_markers": [
+        "Difficulty saying no to requests",
+        "Takes on too much responsibility",
+        "Seeks constant reassurance from others",
+        "Apologizes frequently for normal business decisions"
+      ],
+      "impact_on_team": [
+        "Unclear boundaries lead to team confusion",
+        "Decision-making delayed by consensus-seeking",
+        "Team may lose respect due to inconsistent leadership"
+      ],
+      "decision_making_style": "Seeks extensive input and consensus, often delays decisions to avoid potential conflicts",
+      "lios_interpretation": "Deep need for belonging conflicts with leadership authority, creating internal tension",
+      "growth_levers": [
+        "Boundary-setting skills development",
+        "Assertiveness training",
+        "Self-advocacy practice",
+        "Conflict resolution skill building"
+      ]
+    },
+    "tertiary": {
+      "unmet_need": "Freedom from catastrophic worry and ability to trust own competence in uncertain situations",
+      "surrender_behavior": "Becomes paralyzed by anxiety, seeks excessive reassurance before taking any action",
+      "avoidance_behavior": "Delegates decision-making in ambiguous situations, avoids strategic planning with unknown variables",
+      "overcompensation_behavior": "Creates exhaustive contingency plans, demands excessive data before decisions, implements rigid control systems",
+      "maladaptive_modes": [
+        "Anxious Worrier",
+        "Paranoid Over-Controller"
+      ],
+      "leadership_persona": "The Hypervigilant Strategist",
+      "healthy_persona": "The Prudent Risk-Taker",
+      "leadership_behavior_markers": [
+        "Overanalyzes potential threats and worst-case scenarios",
+        "Implements excessive monitoring and control systems",
+        "Difficulty making decisions without complete information",
+        "Shows visible anxiety during periods of organizational change"
+      ],
+      "impact_on_team": [
+        "Team paralyzed by excessive planning requirements",
+        "Innovation stifled by risk-averse culture",
+        "Talented risk-takers leave for more dynamic environments",
+        "Decision velocity significantly slowed"
+      ],
+      "decision_making_style": "Extensive scenario planning with focus on downside protection, requires multiple layers of approval for anything novel",
+      "lios_interpretation": "Underlying vulnerability anxiety manifests as hyper-preparedness and control-seeking in leadership context",
+      "growth_levers": [
+        "Practice graduated exposure to uncertainty",
+        "Develop tolerance for ambiguity through structured experiments",
+        "Build trust in team's capacity to handle unexpected challenges",
+        "Work on somatic regulation during anxiety activation"
+      ]
+    }
+  },
+  "clinical": {
+    "primary": {
+      "Core_Needs_Frustrated": [
+        "Autonomy and self-determination",
+        "Recognition of competence",
+        "Emotional safety in vulnerability"
+      ],
+      "Typical_Developmental_Window": "Ages 3-6: Initiative vs. Guilt - Critical formation period for self-efficacy",
+      "Attachment_Correlates": [
+        "Anxious-preoccupied attachment style",
+        "High need for external validation",
+        "Fear of abandonment in professional contexts"
+      ],
+      "Developmental_Pathways": [
+        "Early criticism of performance created association between achievement and self-worth",
+        "Intermittent reinforcement patterns established perfectionist tendencies"
+      ],
+      "Neurocognitive_Correlates": [
+        "Heightened threat detection in social situations",
+        "Elevated cortisol response to performance evaluations",
+        "Hypervigilance to social rejection cues"
+      ],
+      "Memory_Systems": [
+        "Implicit memory: Body tension during presentations",
+        "Explicit memory: Specific incidents of public criticism",
+        "Semantic memory: Rules about needing to be perfect"
+      ],
+      "Regulatory_Profile": "Dysregulated under stress, difficulty with emotional modulation when triggered",
+      "Maintaining_Biases": [
+        "Confirmation bias toward criticism",
+        "Mind-reading assumptions about others' negative judgments",
+        "All-or-nothing thinking about performance"
+      ],
+      "Testable_Predictions": [
+        "Will show physiological stress response before high-stakes presentations",
+        "Performance improves significantly in low-criticism environments",
+        "Relationships improve when given explicit positive feedback"
+      ],
+      "Primary_Thought": "I must be perfect or I will be rejected and criticized",
+      "Primary_Emotion": "Shame and anxiety about potential inadequacy",
+      "Primary_Belief": "My worth depends on flawless performance and others' approval",
+      "Primary_Bodily_Anchor": "Chest tightness and shallow breathing when anticipating evaluation",
+      "Recognized_Variants": [
+        "Defectiveness/Shame schema with narcissistic compensations",
+        "Approval-seeking variant of dependent personality patterns"
+      ],
+      "Mode_Surrender": [
+        "Withdrawal from challenging situations",
+        "Passive compliance to avoid criticism",
+        "Self-isolation when feeling inadequate"
+      ],
+      "Mode_Avoidance": [
+        "Procrastination on high-visibility projects",
+        "Delegation of important presentations to others",
+        "Avoidance of feedback sessions"
+      ],
+      "Mode_Overcompensation": [
+        "Excessive preparation and over-rehearsal",
+        "Aggressive defense of ideas and decisions",
+        "Micromanagement of team performance"
+      ],
+      "Key_Moderators": [
+        "Supportive team environment reduces symptoms",
+        "Clear expectations and structured feedback improve functioning",
+        "Mindfulness practices help with emotional regulation"
+      ],
+      "Core_Threat_Signal": "Criticism or perceived disapproval from authority figures or peers",
+      "Primary_Defenses(Base-Rate)": [
+        "Intellectualization",
+        "Perfectionism",
+        "Emotional withdrawal"
+      ],
+      "Surrender_Mode_Defenses": [
+        "Passive aggression",
+        "Self-deprecation",
+        "Learned helplessness"
+      ],
+      "Avoidance_Mode_Defenses": [
+        "Procrastination",
+        "Rationalization",
+        "Displacement activities"
+      ],
+      "Overcompensation_Mode_Defenses": [
+        "Reaction formation",
+        "Grandiosity",
+        "Aggressive control"
+      ],
+      "Vaillant_Levels_Typically_Engaged": [
+        "Level 3: Neurotic defenses (intellectualization, isolation)",
+        "Level 4: Mature defenses (when regulated and supported)"
+      ],
+      "Defensive_Function(Anxiety_Avoided)": "Protection from experiencing core shame about inadequacy and fear of rejection",
+      "Notes/Discriminators": "Distinguishing features: High intellectual capacity masks deeper emotional vulnerabilities. Success in professional domain contrasts with interpersonal difficulties. Responds well to structured, predictable environments."
+    },
+    "secondary": {
+      "Core_Needs_Frustrated": [
+        "Secure attachment and belonging",
+        "Emotional attunement from others"
+      ],
+      "Typical_Developmental_Window": "Ages 0-2: Trust vs. Mistrust - Early attachment formation",
+      "Attachment_Correlates": [
+        "Anxious attachment patterns",
+        "Fear of abandonment"
+      ],
+      "Primary_Thought": "I must be needed by others to belong",
+      "Primary_Emotion": "Anxiety about being left out or rejected",
+      "Primary_Belief": "I am only valuable when I am helping others",
+      "Core_Threat_Signal": "Signs of relational disconnection or conflict"
+    },
+    "tertiary": {
+      "Core_Needs_Frustrated": [
+        "Predictability and safety in environment",
+        "Protection from harm and catastrophe"
+      ],
+      "Typical_Developmental_Window": "Ages 2-4: Autonomy development - Critical period for building sense of safety vs. world as dangerous",
+      "Attachment_Correlates": [
+        "Fearful-avoidant attachment style",
+        "Hypervigilance to environmental threats",
+        "Difficulty trusting others' competence"
+      ],
+      "Developmental_Pathways": [
+        "Early exposure to unpredictable or chaotic environment created association between uncertainty and danger",
+        "Parental anxiety modeling reinforced catastrophic thinking patterns",
+        "Successful outcomes from hyper-planning reinforced the pattern"
+      ],
+      "Neurocognitive_Correlates": [
+        "Overactive amygdala response to novel situations",
+        "Heightened cortisol during uncertainty",
+        "Difficulty with prefrontal cortex regulation under ambiguity"
+      ],
+      "Memory_Systems": [
+        "Implicit memory: Tension and vigilance during uncertain situations",
+        "Explicit memory: Past incidents where lack of preparation led to negative outcomes",
+        "Semantic memory: Rules about needing to control and prepare for everything"
+      ],
+      "Regulatory_Profile": "Chronic baseline anxiety, difficulty downregulating once threat detection activated",
+      "Maintaining_Biases": [
+        "Probability overestimation of negative outcomes",
+        "Catastrophic thinking about ambiguous situations",
+        "Confirmation bias toward threat cues"
+      ],
+      "Testable_Predictions": [
+        "Physiological anxiety response increases proportionally with uncertainty levels",
+        "Performance improves in structured, predictable environments",
+        "Anxiety reduces when given tools for managing uncertainty"
+      ],
+      "Primary_Thought": "Something terrible will happen if I don't prepare for every possibility",
+      "Primary_Emotion": "Chronic anxiety and fear about potential disasters",
+      "Primary_Belief": "The world is dangerous and unpredictable, and I must be constantly vigilant",
+      "Primary_Bodily_Anchor": "Stomach tension and difficulty breathing when facing unknowns",
+      "Recognized_Variants": [
+        "Vulnerability to Harm/Illness schema with anxious personality features",
+        "Generalized Anxiety Disorder presentation"
+      ],
+      "Mode_Surrender": [
+        "Paralysis and inability to act when overwhelmed by possibilities",
+        "Seeking excessive reassurance from others",
+        "Waiting for others to make decisions"
+      ],
+      "Mode_Avoidance": [
+        "Procrastination on decisions with uncertain outcomes",
+        "Delegation of ambiguous responsibilities",
+        "Avoidance of strategic planning sessions"
+      ],
+      "Mode_Overcompensation": [
+        "Obsessive contingency planning",
+        "Hyper-controlling behaviors",
+        "Aggressive data-gathering and analysis"
+      ],
+      "Key_Moderators": [
+        "Structured decision-making frameworks reduce anxiety",
+        "Trusted team members can help reality-test concerns",
+        "Mindfulness practices improve tolerance for uncertainty"
+      ],
+      "Core_Threat_Signal": "Ambiguity, unpredictability, or loss of control in important domains",
+      "Primary_Defenses(Base-Rate)": [
+        "Intellectualization and over-analysis",
+        "Obsessive planning",
+        "Controlling behaviors"
+      ],
+      "Surrender_Mode_Defenses": [
+        "Dependency on others for decisions",
+        "Learned helplessness in face of uncertainty",
+        "Regression to childlike reassurance-seeking"
+      ],
+      "Avoidance_Mode_Defenses": [
+        "Procrastination",
+        "Delegation of ambiguous tasks",
+        "Rationalization of avoidance"
+      ],
+      "Overcompensation_Mode_Defenses": [
+        "Reaction formation (appearing fearless)",
+        "Obsessive-compulsive control mechanisms",
+        "Paranoid hypervigilance"
+      ],
+      "Vaillant_Levels_Typically_Engaged": [
+        "Level 2: Immature defenses (controlling, passive-aggressive when anxious)",
+        "Level 3: Neurotic defenses (intellectualization, undoing) when regulated"
+      ],
+      "Defensive_Function(Anxiety_Avoided)": "Protection from experiencing core vulnerability and fear about being unable to handle unpredictable threats",
+      "Notes/Discriminators": "Distinguishing features: Tertiary pattern emerges primarily in contexts of strategic uncertainty and organizational change. Unlike primary perfectionism (focused on performance evaluation), this is threat-focused vigilance about environmental safety. Pattern may not be obvious in routine operations but becomes prominent during transitions or crises."
+    }
+  },
+  "advanced_insights": {
+    "hypotheses": [
+      "The primary and secondary patterns create internal conflict between need for control and need for connection",
+      "Leadership effectiveness varies dramatically based on perceived safety of the environment",
+      "Underlying trauma-informed approach needed due to early developmental impacts"
+    ],
+    "correlations": [
+      "Performance anxiety correlates with criticism from authority figures",
+      "Team effectiveness inversely correlated with leader's stress levels",
+      "Innovation metrics improve when psychological safety is explicitly addressed"
+    ],
+    "intervention_targets": [
+      "Develop distress tolerance skills for handling criticism",
+      "Create explicit psychological safety practices for team",
+      "Address shame-based core beliefs through therapeutic modalities",
+      "Build self-compassion and internal validation capacity"
+    ]
+  },
+  "coaching_process": {
+    "coaching_plan": [
+      "Phase 1: Establish safety and build self-awareness of patterns",
+      "Phase 2: Develop emotional regulation skills and distress tolerance",
+      "Phase 3: Practice vulnerable leadership and healthy boundary-setting",
+      "Phase 4: Integration and sustainable habit formation"
+    ],
+    "session_log": [
+      "Session 1: Initial pattern recognition, high defensiveness observed",
+      "Session 2: Breakthrough moment - connected current stress to early criticism",
+      "Session 3: Practiced mindfulness techniques, noticed body awareness improvements"
+    ],
+    "additional_insights": [
+      "Client shows high intellectual capacity but limited emotional vocabulary",
+      "Strong motivation for change when connected to team impact",
+      "Responds well to concrete, structured interventions rather than open-ended exploration"
+    ]
+  },
+  "analysis_lineage": {
+    "schema_pack_version": "2.1.0",
+    "schema_pack_hash": "sha256:abc123def456",
+    "analysis_version": "bridge@2.1.0",
+    "instrument": {
+      "name": "Young Schema Questionnaire",
+      "version": "YSQ-L3"
+    },
+    "scoring_params": {
+      "thresholds": {
+        "PRIMARY_MIN": 60,
+        "SECONDARY_MIN": 50,
+        "TERTIARY_MIN": 50,
+        "MAX_SECONDARY_DELTA": 12,
+        "MAX_TERTIARY_DELTA": 15
+      },
+      "tie_rules": ["higher_tscore", "higher_reliability", "higher_item_count", "instrument_priority", "lexicographic_canonical_id"],
+      "normalization_config": "sha256:norm123"
+    },
+    "processed_at": "2025-09-16T04:47:50Z",
+    "processing_duration_ms": 1247,
+    "schema_rankings": [
+      {
+        "schemaId": "unrelenting_standards_hypercriticalness",
+        "tscore": 68,
+        "percentile": 96,
+        "item_count": 8,
+        "reliability": 0.92,
+        "rank": 1,
+        "is_primary": true,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "self_sacrifice",
+        "tscore": 62,
+        "percentile": 88,
+        "item_count": 7,
+        "reliability": 0.88,
+        "rank": 2,
+        "is_primary": false,
+        "is_secondary": true,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "vulnerability_to_harm_illness",
+        "tscore": 58,
+        "percentile": 79,
+        "item_count": 6,
+        "reliability": 0.82,
+        "rank": 3,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": true
+      },
+      {
+        "schemaId": "approval_seeking_recognition_seeking",
+        "tscore": 54,
+        "percentile": 70,
+        "item_count": 5,
+        "reliability": 0.78,
+        "rank": 4,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "emotional_inhibition",
+        "tscore": 52,
+        "percentile": 65,
+        "item_count": 5,
+        "reliability": 0.75,
+        "rank": 5,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "defectiveness_shame",
+        "tscore": 48,
+        "percentile": 58,
+        "item_count": 4,
+        "reliability": 0.68,
+        "rank": 6,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "subjugation",
+        "tscore": 46,
+        "percentile": 52,
+        "item_count": 4,
+        "reliability": 0.65,
+        "rank": 7,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "abandonment_instability",
+        "tscore": 44,
+        "percentile": 48,
+        "item_count": 4,
+        "reliability": 0.62,
+        "rank": 8,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      }
+    ]
+  }
+}

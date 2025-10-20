@@ -1,0 +1,363 @@
+{
+  "schemaVersion": "1.0",
+  "instrument": {
+    "name": "Schema Questionnaire - 6 Point Scale",
+    "version": "2.0"
+  },
+  "respondent": {
+    "id": "respondent-12345"
+  },
+  "assessment": {
+    "assessmentId": "assessment-67890",
+    "completedAt": "2025-10-20T10:00:00.000Z"
+  },
+  "items": [
+    {
+      "schema_id": "abandonment_instability",
+      "item_number": 1,
+      "raw": 5,
+      "tscore": 65,
+      "percentile": 92,
+      "response_text": "If I don't stay close, they'll leave me.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "abandonment_instability",
+      "item_number": 2,
+      "raw": 4,
+      "tscore": 62,
+      "percentile": 88,
+      "response_text": "I check in constantly.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "abandonment_instability",
+      "item_number": 3,
+      "raw": 5,
+      "tscore": 65,
+      "percentile": 92,
+      "response_text": "I worry they'll leave without me.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "abandonment_instability",
+      "item_number": 4,
+      "raw": 4,
+      "tscore": 62,
+      "percentile": 88,
+      "response_text": "I need frequent reassurance from my team.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "abandonment_instability",
+      "item_number": 5,
+      "raw": 6,
+      "tscore": 70,
+      "percentile": 96,
+      "response_text": "I fear being replaced or forgotten.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "abandonment_instability",
+      "item_number": 6,
+      "raw": 5,
+      "tscore": 65,
+      "percentile": 92,
+      "response_text": "I struggle when people are unavailable.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "defectiveness_shame",
+      "item_number": 1,
+      "raw": 2,
+      "tscore": 45,
+      "percentile": 31,
+      "response_text": "Better to stay in background.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "defectiveness_shame",
+      "item_number": 2,
+      "raw": 3,
+      "tscore": 50,
+      "percentile": 50,
+      "response_text": "If I shine, flaws will show.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "defectiveness_shame",
+      "item_number": 3,
+      "raw": 2,
+      "tscore": 45,
+      "percentile": 31,
+      "response_text": "I'm not good enough.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "defectiveness_shame",
+      "item_number": 4,
+      "raw": 2,
+      "tscore": 45,
+      "percentile": 31,
+      "response_text": "I fear others will discover my weaknesses.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "defectiveness_shame",
+      "item_number": 5,
+      "raw": 3,
+      "tscore": 50,
+      "percentile": 50,
+      "response_text": "I downplay my achievements.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "defectiveness_shame",
+      "item_number": 6,
+      "raw": 2,
+      "tscore": 45,
+      "percentile": 31,
+      "response_text": "I feel fundamentally flawed.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "mistrust_abuse",
+      "item_number": 1,
+      "raw": 3,
+      "tscore": 52,
+      "percentile": 58,
+      "response_text": "People will use me if I'm not careful.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "mistrust_abuse",
+      "item_number": 2,
+      "raw": 4,
+      "tscore": 58,
+      "percentile": 79,
+      "response_text": "I guard my vulnerabilities.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "mistrust_abuse",
+      "item_number": 3,
+      "raw": 3,
+      "tscore": 52,
+      "percentile": 58,
+      "response_text": "Trust must be earned repeatedly.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "mistrust_abuse",
+      "item_number": 4,
+      "raw": 4,
+      "tscore": 58,
+      "percentile": 79,
+      "response_text": "I question people's true motives.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "mistrust_abuse",
+      "item_number": 5,
+      "raw": 3,
+      "tscore": 52,
+      "percentile": 58,
+      "response_text": "I keep important information to myself.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "mistrust_abuse",
+      "item_number": 6,
+      "raw": 4,
+      "tscore": 58,
+      "percentile": 79,
+      "response_text": "I expect to be taken advantage of.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "emotional_deprivation",
+      "item_number": 1,
+      "raw": 1,
+      "tscore": 40,
+      "percentile": 16,
+      "response_text": "My emotional needs don't matter.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "emotional_deprivation",
+      "item_number": 2,
+      "raw": 2,
+      "tscore": 45,
+      "percentile": 31,
+      "response_text": "I don't expect understanding.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "emotional_deprivation",
+      "item_number": 3,
+      "raw": 1,
+      "tscore": 40,
+      "percentile": 16,
+      "response_text": "Connection feels out of reach.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "emotional_deprivation",
+      "item_number": 4,
+      "raw": 2,
+      "tscore": 45,
+      "percentile": 31,
+      "response_text": "I rarely expect emotional support.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "emotional_deprivation",
+      "item_number": 5,
+      "raw": 1,
+      "tscore": 40,
+      "percentile": 16,
+      "response_text": "I feel unseen by others.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "emotional_deprivation",
+      "item_number": 6,
+      "raw": 2,
+      "tscore": 45,
+      "percentile": 31,
+      "response_text": "I accept minimal emotional connection.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "unrelenting_standards_hypercriticalness",
+      "item_number": 1,
+      "raw": 5,
+      "tscore": 68,
+      "percentile": 95,
+      "response_text": "Good enough isn't acceptable.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "unrelenting_standards_hypercriticalness",
+      "item_number": 2,
+      "raw": 6,
+      "tscore": 72,
+      "percentile": 98,
+      "response_text": "I push beyond reasonable limits.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "unrelenting_standards_hypercriticalness",
+      "item_number": 3,
+      "raw": 5,
+      "tscore": 68,
+      "percentile": 95,
+      "response_text": "Excellence is the minimum standard.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "unrelenting_standards_hypercriticalness",
+      "item_number": 4,
+      "raw": 6,
+      "tscore": 72,
+      "percentile": 98,
+      "response_text": "I'm never satisfied with my work.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "unrelenting_standards_hypercriticalness",
+      "item_number": 5,
+      "raw": 5,
+      "tscore": 68,
+      "percentile": 95,
+      "response_text": "I criticize myself harshly for mistakes.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    },
+    {
+      "schema_id": "unrelenting_standards_hypercriticalness",
+      "item_number": 6,
+      "raw": 6,
+      "tscore": 72,
+      "percentile": 98,
+      "response_text": "I expect perfection from myself and others.",
+      "likert_scale": "6-point",
+      "reverse": false,
+      "weight": 1
+    }
+  ],
+  "metadata": {
+    "scale_info": {
+      "type": "6-point Likert scale",
+      "anchors": {
+        "1": "Completely disagree",
+        "2": "Mostly disagree",
+        "3": "Slightly disagree",
+        "4": "Slightly agree",
+        "5": "Mostly agree",
+        "6": "Completely agree"
+      },
+      "items_per_schema": 6,
+      "total_schemas": 18,
+      "total_items": 108
+    },
+    "instructions": "This is a sample import file with 6 items per schema on a 6-point Likert scale. For a complete assessment, include all 18 schemas with 6 items each (108 total items)."
+  }
+}

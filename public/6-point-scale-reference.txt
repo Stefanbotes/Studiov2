@@ -1,0 +1,43 @@
+═══════════════════════════════════════════════════════════════════
+                    6-POINT LIKERT SCALE REFERENCE
+                         Studio 2 Assessment System
+═══════════════════════════════════════════════════════════════════
+
+SCALE VALUES:
+─────────────
+1 = Completely disagree
+2 = Mostly disagree  
+3 = Slightly disagree
+4 = Slightly agree
+5 = Mostly agree
+6 = Completely agree
+
+KEY FEATURES:
+─────────────
+✓ No neutral midpoint (forces choice)
+✓ 6 items per schema (up from 3)
+✓ 18 schemas total
+✓ 108 total assessment items
+✓ Raw score range per item: 1-6
+✓ Schema score range: 6-36 (sum of 6 items)
+
+SCORING INTERPRETATION:
+───────────────────────
+Schema Mean Score (sum÷6):
+• 1.0-2.0: Low endorsement
+• 2.1-3.0: Mild endorsement  
+• 3.1-4.0: Moderate endorsement
+• 4.1-5.0: High endorsement
+• 5.1-6.0: Very high endorsement
+
+T-SCORE THRESHOLDS:
+──────────────────
+• < 40: Very low
+• 40-49: Low
+• 50-59: Average
+• 60-69: Elevated (Clinical attention)
+• 70+: Very elevated (Immediate attention)
+
+═══════════════════════════════════════════════════════════════════
+                        Version: 2.0 | Date: Oct 2025
+═══════════════════════════════════════════════════════════════════

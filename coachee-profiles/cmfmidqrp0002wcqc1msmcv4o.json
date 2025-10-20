@@ -1,0 +1,435 @@
+{
+  "participant": {
+    "name": "L L",
+    "email": "L@XLT.com",
+    "org": null,
+    "title": "Senior Manager",
+    "overall": {
+      "label": "EMOTIONAL INHIBITION SCHEMA",
+      "variant": "low"
+    },
+    "nextSession": "TBD"
+  },
+  "leadership": {
+    "primary": {
+      "unmet_need": "Emotional expression",
+      "surrender_behavior": "Suppresses feelings",
+      "avoidance_behavior": "Avoids emotional topics",
+      "overcompensation_behavior": "Restrains others’ emotions",
+      "maladaptive_modes": [
+        "Detached Protector, Stoic Mask"
+      ],
+      "leadership_persona": "The Expressive Anchor",
+      "healthy_persona": "The Expressive Anchor",
+      "leadership_behavior_markers": [
+        "Detached, unreadable"
+      ],
+      "impact_on_team": [
+        "Low cohesion"
+      ],
+      "decision_making_style": "Logical, distant",
+      "lios_interpretation": "OS Glitch: Emotional output channel blocked. Upgrade: Enable safe expression module, balance logic with empathy.",
+      "growth_levers": [
+        null
+      ]
+    },
+    "secondary": {
+      "unmet_need": "Empathy, nurturance, support",
+      "surrender_behavior": "Accepts cold relationships",
+      "avoidance_behavior": "Avoids emotional engagement",
+      "overcompensation_behavior": "Dismisses emotional needs as weakness",
+      "maladaptive_modes": [
+        "Detached Protector, Overcontroller"
+      ],
+      "leadership_persona": "The Empathic Leader",
+      "healthy_persona": "The Emotionally Available Leader",
+      "leadership_behavior_markers": [
+        "Detached, task-focused"
+      ],
+      "impact_on_team": [
+        "Low psychological safety"
+      ],
+      "decision_making_style": "Rational but cold",
+      "lios_interpretation": "OS Glitch: Emotional input filters set to block. Upgrade: Enable empathy API, build emotional connection subroutines.",
+      "growth_levers": [
+        null
+      ]
+    }
+  },
+  "clinical": {
+    "primary": {
+      "Core_Needs_Frustrated": [
+        "Freedom to express emotion; spontaneity"
+      ],
+      "Typical_Developmental_Window": "Early–middle childhood (5–10)",
+      "Attachment_Correlates": [
+        "Avoidant-dismissive"
+      ],
+      "Developmental_Pathways": [
+        "Punishment/critique of emotion; modeling of stoicism"
+      ],
+      "Neurocognitive_Correlates": [
+        "Reduced limbic expression; increased lateral PFC suppression; altered insula awareness"
+      ],
+      "Memory_Systems": [
+        "Semantic rule: emotion=unsafe/weak"
+      ],
+      "Regulatory_Profile": "Suppression; constrained affect",
+      "Maintaining_Biases": [
+        "Overvaluation of control; fear of disinhibition"
+      ],
+      "Testable_Predictions": [
+        "Increased PFC recruitment during emotion viewing; dampened facial EMG to affective stimuli"
+      ],
+      "Primary_Thought": "Don’t show it; stay controlled.",
+      "Primary_Emotion": "Muted affect with underlying tension/anxiety.",
+      "Primary_Belief": "Emotion is unsafe/weak or will burden others.",
+      "Primary_Bodily_Anchor": "Breath holding; rigid musculature; flat prosody.",
+      "Recognized_Variants": [
+        "Stoic pride; fearful suppression; instrumental displays only."
+      ],
+      "Mode_Surrender": [
+        "Suppresses/compartmentalizes; minimal outward affect."
+      ],
+      "Mode_Avoidance": [
+        "Avoids emotive/intimate contexts; steers to tasks/ideas."
+      ],
+      "Mode_Overcompensation": [
+        "Sudden outbursts; performative emotion to manage impressions."
+      ],
+      "Key_Moderators": [
+        "Evaluation/masculinity norms; perfectionism; trauma reminders."
+      ],
+      "Core_Threat_Signal": "Fear that emotion causes harm, judgment, or loss of control.",
+      "Primary_Defenses(Base-Rate)": [
+        "Suppression (mature); Isolation of affect; Intellectualization; Reaction formation (politeness/stoicism); Somatization; Dissociation."
+      ],
+      "Surrender_Mode_Defenses": [
+        "Chronic suppression; Compartmentalization; Flat prosody."
+      ],
+      "Avoidance_Mode_Defenses": [
+        "Avoids emotive contexts; Task-focus to bypass affect."
+      ],
+      "Overcompensation_Mode_Defenses": [
+        "Sudden outbursts; Instrumental/performative displays to manage impressions."
+      ],
+      "Vaillant_Levels_Typically_Engaged": [
+        "Mature (suppression); Neurotic (isolation, intellectualization); Immature (somatization) under load."
+      ],
+      "Defensive_Function(Anxiety_Avoided)": "Prevents anticipated shame or chaos from emotion.",
+      "Notes/Discriminators": "QA ANALYSIS: 2025-09-16T04:47:50Z | LASBI v2025.09 | Primary: emotional_inhibition (T53) | Confidence: 0.0% | Atlas-validated"
+    },
+    "secondary": {
+      "Core_Needs_Frustrated": [
+        "Emotional nurturance; attunement; empathy"
+      ],
+      "Typical_Developmental_Window": "Early childhood (2–7)",
+      "Attachment_Correlates": [
+        "Avoidant-dismissive"
+      ],
+      "Developmental_Pathways": [
+        "Emotionally distant caregiving; instrumental care without warmth"
+      ],
+      "Neurocognitive_Correlates": [
+        "Blunted ventral striatal response to affiliation cues; reduced vmPFC valuation of closeness; dampened oxytocinergic signaling (theoretical)"
+      ],
+      "Memory_Systems": [
+        "Semantic generalizations of 'no one meets my needs'; impoverished positive autobiographical recall"
+      ],
+      "Regulatory_Profile": "Detachment/underactivation in intimacy; alexithymia risk",
+      "Maintaining_Biases": [
+        "Discounting of others’ care; attentional avoidance of closeness cues"
+      ],
+      "Testable_Predictions": [
+        "Reduced reward prediction error to supportive feedback; lower accuracy identifying nurturant facial expressions"
+      ],
+      "Primary_Thought": "My needs won’t be met or understood.",
+      "Primary_Emotion": "Sadness/emptiness; low arousal.",
+      "Primary_Belief": "No one will nurture or truly attune to me.",
+      "Primary_Bodily_Anchor": "Hollowness in chest; low energy; blunted affect.",
+      "Recognized_Variants": [
+        "Cynical detachment; aching longing for care."
+      ],
+      "Mode_Surrender": [
+        "Minimizes needs; accepts lonely/supportive role."
+      ],
+      "Mode_Avoidance": [
+        "Avoids intimacy bids; distracts with self-sufficiency."
+      ],
+      "Mode_Overcompensation": [
+        "Demands for care, dramatic tests of loyalty/attunement."
+      ],
+      "Key_Moderators": [
+        "Availability of empathic signals; cultural norms for expressiveness."
+      ],
+      "Core_Threat_Signal": "Unmet nurturance/attunement; expectation of emotional neglect.",
+      "Primary_Defenses(Base-Rate)": [
+        "Withdrawal; Schizoid fantasy; Intellectualization; Devaluation of needs; Suppression; Reaction formation (stoicism)."
+      ],
+      "Surrender_Mode_Defenses": [
+        "Denial of needs; Self-effacing compliance; Introjection of 'needs are burdensome'."
+      ],
+      "Avoidance_Mode_Defenses": [
+        "Emotional detachment; Isolation of affect; Somatization of unmet needs."
+      ],
+      "Overcompensation_Mode_Defenses": [
+        "Demanding/accusatory tests (undoing deprivation); Idealization of rare nurturers."
+      ],
+      "Vaillant_Levels_Typically_Engaged": [
+        "Neurotic (isolation, intellectualization); Immature (devaluation); Mature (suppression) as socially rewarded stoicism."
+      ],
+      "Defensive_Function(Anxiety_Avoided)": "Avoids shame/longing; prevents retraumatization of disappointment.",
+      "Notes/Discriminators": "QA ANALYSIS: Secondary emotional_deprivation (T50) | Atlas-validated"
+    }
+  },
+  "coaching_process": {
+    "coaching_plan": [
+      "QA SCHEMA-FOCUSED COACHING: EMOTIONAL INHIBITION",
+      "Primary development: Core leadership patterns",
+      "Secondary focus: emotional_deprivation",
+      "Clinical confidence: LOW (0.0%)",
+      "Analysis version: QA Bridge v2.1.0"
+    ],
+    "session_log": [
+      "QA ANALYSIS IMPORT: 2025-09-16T04:47:50Z",
+      "Instrument: LASBI v2025.09",
+      "PRIMARY SCHEMA: EMOTIONAL INHIBITION (T53)",
+      "SECONDARY SCHEMA: EMOTIONAL DEPRIVATION (T50)",
+      "TERTIARY SCHEMA: NONE DETECTED",
+      "CONFIDENCE: 0.0% (LOW)",
+      "TIE-BREAKERS: None required",
+      "No primary schema found: highest score was T53 (< T60 threshold)",
+      "Descriptive fallback: exploratory primary emotional_inhibition (T53), exploratory secondary emotional_deprivation (T50)"
+    ],
+    "additional_insights": [
+      "Assessment processing completed with deterministic QA pipeline",
+      "Schema selection used clinical thresholds: Primary ≥T53, Secondary ≥T55 (Δ≤7), Tertiary ≥T50 (Δ≤12)",
+      "LIOS Framework: OS Glitch: Emotional output channel blocked. Upgrade: Enable safe expression module, balance logic with empathy.",
+      "All content validated against atlas requirements - no fallback data used"
+    ]
+  },
+  "analysis_lineage": {
+    "schema_pack_version": "v1757859662072",
+    "schema_pack_hash": "8b777c70a697558eba131643a27d3613b697698819103c3c353209fc869f4795",
+    "analysis_version": "bridge@2.1.0",
+    "instrument": {
+      "name": "LASBI",
+      "version": "2025.09"
+    },
+    "scoring_params": {
+      "thresholds": {
+        "PRIMARY_MIN": 60,
+        "SECONDARY_MIN": 50,
+        "TERTIARY_MIN": 50,
+        "MAX_SECONDARY_DELTA": 12,
+        "MAX_TERTIARY_DELTA": 15
+      },
+      "tie_rules": [],
+      "normalization_config": "default"
+    },
+    "processed_at": "2025-10-12T19:40:19.519Z",
+    "processing_duration_ms": 6,
+    "primary_id": "emotional_inhibition",
+    "secondary_id": "emotional_deprivation",
+    "schema_rankings": [
+      {
+        "schemaId": "emotional_inhibition",
+        "tscore": 53,
+        "percentile": 57,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 1,
+        "is_primary": true,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "emotional_deprivation",
+        "tscore": 50,
+        "percentile": 50,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 2,
+        "is_primary": false,
+        "is_secondary": true,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "insufficient_self_control_discipline",
+        "tscore": 50,
+        "percentile": 50,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 3,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "social_isolation_alienation",
+        "tscore": 47,
+        "percentile": 43,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 4,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "enmeshment_undeveloped_self",
+        "tscore": 47,
+        "percentile": 43,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 5,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "mistrust_abuse",
+        "tscore": 43,
+        "percentile": 33,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 6,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "dependence_incompetence",
+        "tscore": 43,
+        "percentile": 33,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 7,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "failure",
+        "tscore": 43,
+        "percentile": 33,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 8,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "unrelenting_standards_hypercriticalness",
+        "tscore": 43,
+        "percentile": 33,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 9,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "defectiveness_shame",
+        "tscore": 40,
+        "percentile": 25,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 10,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "subjugation",
+        "tscore": 40,
+        "percentile": 25,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 11,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "negativity_pessimism",
+        "tscore": 40,
+        "percentile": 25,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 12,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "entitlement_grandiosity",
+        "tscore": 33,
+        "percentile": 8,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 13,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "self_sacrifice",
+        "tscore": 33,
+        "percentile": 8,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 14,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "abandonment_instability",
+        "tscore": 30,
+        "percentile": 0,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 15,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "vulnerability_to_harm_illness",
+        "tscore": 30,
+        "percentile": 0,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 16,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "approval_seeking_recognition_seeking",
+        "tscore": 30,
+        "percentile": 0,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 17,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      },
+      {
+        "schemaId": "punitiveness",
+        "tscore": 30,
+        "percentile": 0,
+        "item_count": 3,
+        "reliability": 1,
+        "rank": 18,
+        "is_primary": false,
+        "is_secondary": false,
+        "is_tertiary": false
+      }
+    ]
+  }
+}

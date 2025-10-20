@@ -1,0 +1,116 @@
+
+{
+  "modes": [
+    {
+      "id": "vulnerable_child",
+      "name": "Vulnerable Child",
+      "type": "Child",
+      "linkedSchemas": ["abandonment_instability", "emotional_deprivation", "defectiveness_shame", "mistrust_abuse"],
+      "copingStrategy": "Fear, sadness, loneliness; seeks care but feels unsafe.",
+      "category": "child_modes"
+    },
+    {
+      "id": "angry_child",
+      "name": "Angry Child",
+      "type": "Child",
+      "linkedSchemas": ["entitlement_grandiosity", "abandonment_instability", "mistrust_abuse"],
+      "copingStrategy": "Rage when needs are unmet; often disproportionate anger.",
+      "category": "child_modes"
+    },
+    {
+      "id": "impulsive_undisciplined_child",
+      "name": "Impulsive/Undisciplined Child",
+      "type": "Child",
+      "linkedSchemas": ["entitlement_grandiosity", "insufficient_self_control"],
+      "copingStrategy": "Acts on impulses; avoids frustration; difficulty delaying gratification.",
+      "category": "child_modes"
+    },
+    {
+      "id": "happy_child",
+      "name": "Happy Child",
+      "type": "Child",
+      "linkedSchemas": [],
+      "copingStrategy": "Joy, spontaneity, playfulness; unmet needs being satisfied.",
+      "category": "child_modes",
+      "isAdaptive": true
+    },
+    {
+      "id": "detached_protector",
+      "name": "Detached Protector",
+      "type": "Coping",
+      "linkedSchemas": ["emotional_deprivation", "mistrust_abuse", "defectiveness_shame"],
+      "copingStrategy": "Emotional numbing, withdrawal, shutting down to avoid pain.",
+      "category": "coping_modes"
+    },
+    {
+      "id": "detached_self_soother",
+      "name": "Detached Self-Soother",
+      "type": "Coping",
+      "linkedSchemas": ["emotional_deprivation", "mistrust_abuse", "defectiveness_shame"],
+      "copingStrategy": "Escaping into work, substances, or distractions to avoid vulnerability.",
+      "category": "coping_modes"
+    },
+    {
+      "id": "compliant_surrender",
+      "name": "Compliant Surrender",
+      "type": "Coping",
+      "linkedSchemas": ["subjugation", "self_sacrifice", "defectiveness_shame"],
+      "copingStrategy": "Passive compliance; submits to others' control; suppresses own needs.",
+      "category": "coping_modes"
+    },
+    {
+      "id": "overcompensator",
+      "name": "Overcompensator",
+      "type": "Coping",
+      "linkedSchemas": ["defectiveness_shame", "failure", "vulnerability_to_harm"],
+      "copingStrategy": "Acts opposite of schema: controlling, perfectionistic, competitive, arrogant.",
+      "category": "coping_modes"
+    },
+    {
+      "id": "bully_attack",
+      "name": "Bully/Attack Mode",
+      "type": "Coping (aggressive)",
+      "linkedSchemas": ["mistrust_abuse", "entitlement_grandiosity"],
+      "copingStrategy": "Preemptively attacks others to avoid being hurt or shamed.",
+      "category": "coping_modes"
+    },
+    {
+      "id": "self_aggrandizer",
+      "name": "Self-Aggrandizer",
+      "type": "Coping (grandiose)",
+      "linkedSchemas": ["entitlement_grandiosity", "defectiveness_shame"],
+      "copingStrategy": "Seeks admiration; denies weakness; inflates self-image.",
+      "category": "coping_modes"
+    },
+    {
+      "id": "punitive_parent",
+      "name": "Punitive Parent",
+      "type": "Dysfunctional Parent",
+      "linkedSchemas": ["defectiveness_shame", "failure", "punitiveness"],
+      "copingStrategy": "Harsh inner critic; self-blame, guilt, shame, self-punishment.",
+      "category": "parent_modes"
+    },
+    {
+      "id": "demanding_parent",
+      "name": "Demanding Parent",
+      "type": "Dysfunctional Parent",
+      "linkedSchemas": ["unrelenting_standards", "punitiveness"],
+      "copingStrategy": "Feels pressure to achieve, be perfect; never good enough.",
+      "category": "parent_modes"
+    },
+    {
+      "id": "healthy_adult",
+      "name": "Healthy Adult",
+      "type": "Adaptive",
+      "linkedSchemas": [],
+      "copingStrategy": "Balances needs, nurtures Child modes, sets limits, realistic perspective.",
+      "category": "adaptive_modes",
+      "isAdaptive": true
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-10-12",
+    "description": "Schema therapy modes with linked schemas and coping strategies"
+  }
+}
