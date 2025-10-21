@@ -45,9 +45,15 @@ export default async function AssessmentsPage() {
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Assessment Overview</h1>
           <p className="text-gray-600 mt-2">
-            View and manage all assessments across your client base
+            View and manage all imported assessments across your client base
           </p>
         </div>
+        <Link href="/assessments/import">
+          <Button className="bg-blue-600 hover:bg-blue-700">
+            <Upload className="w-4 h-4 mr-2" />
+            Import Assessment
+          </Button>
+        </Link>
       </div>
 
       {/* Summary Cards */}
@@ -97,8 +103,14 @@ export default async function AssessmentsPage() {
               <FileText className="w-12 h-12 text-gray-400 mx-auto mb-4" />
               <h3 className="text-lg font-medium text-gray-900 mb-2">No assessments yet</h3>
               <p className="text-gray-500 mb-4">
-                No assessment data available
+                Start by importing your first assessment from App A
               </p>
+              <Link href="/assessments/import">
+                <Button className="bg-blue-600 hover:bg-blue-700">
+                  <Upload className="w-4 h-4 mr-2" />
+                  Import First Assessment
+                </Button>
+              </Link>
             </CardContent>
           </Card>
         ) : (

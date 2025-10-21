@@ -4,7 +4,7 @@
 import { useEffect, useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Users, FileText, TrendingUp, Calendar, Plus, ArrowRight, Link as LinkIcon, AlertCircle } from "lucide-react"
+import { Users, FileText, TrendingUp, Calendar, Plus, ArrowRight, Link as LinkIcon, AlertCircle, Upload } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
@@ -166,6 +166,31 @@ export function DashboardOverview() {
               </Link>
               <Link href="/clients">
                 <Button variant="outline">View All Clients</Button>
+              </Link>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center">
+              <Upload className="mr-2 h-5 w-5 text-green-600" />
+              Assessment Import
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <p className="text-gray-600 text-sm">
+              Import JSON assessment files from App A with automatic validation and analysis.
+            </p>
+            <div className="flex gap-2">
+              <Link href="/assessments/import">
+                <Button className="bg-green-600 hover:bg-green-700">
+                  <Plus className="mr-2 h-4 w-4" />
+                  Import Assessment
+                </Button>
+              </Link>
+              <Link href="/assessments">
+                <Button variant="outline">View Assessments</Button>
               </Link>
             </div>
           </CardContent>

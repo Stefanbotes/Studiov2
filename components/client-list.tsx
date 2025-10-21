@@ -184,6 +184,9 @@ export function ClientList() {
                         <DropdownMenuItem asChild>
                           <Link href={`/clients/${client?.id}/edit`}>Edit Client</Link>
                         </DropdownMenuItem>
+                        <DropdownMenuItem asChild>
+                          <Link href={`/assessments/import?clientId=${client?.id}`}>Import Assessment</Link>
+                        </DropdownMenuItem>
                       </DropdownMenuContent>
                     </DropdownMenu>
                   </div>
