@@ -4,11 +4,22 @@ import { getServerSession } from "next-auth/next"
 import { authOptions } from "@/lib/auth"
 import { prisma } from "@/lib/db"
 
+export const dynamic = "force-dynamic"
+
 export async function PUT(
   req: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {
+    // Verify database connection
+    if (!process.env.DATABASE_URL) {
+      console.error("DATABASE_URL not configured")
+      return NextResponse.json(
+        { error: "Database configuration error" },
+        { status: 500 }
+      )
+    }
+
     const session = await getServerSession(authOptions)
     
     if (!session?.user?.id) {
@@ -78,6 +89,15 @@ export async function GET(
   { params }: { params: { id: string } }
 ) {
   try {
+    // Verify database connection
+    if (!process.env.DATABASE_URL) {
+      console.error("DATABASE_URL not configured")
+      return NextResponse.json(
+        { error: "Database configuration error" },
+        { status: 500 }
+      )
+    }
+
     const session = await getServerSession(authOptions)
     
     if (!session?.user?.id) {
