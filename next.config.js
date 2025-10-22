@@ -15,10 +15,18 @@ const nextConfig = {
     domains: [],
     // Remove unoptimized: true to use Vercel's image optimization
   },
-  // Output file tracing - Vercel handles this automatically
-  // experimental: {
-  //   outputFileTracingRoot: undefined,
-  // },
+  // Prevent Prisma from being bundled - it should use the binary
+  experimental: {
+    serverComponentsExternalPackages: ['@prisma/client', 'prisma'],
+  },
+  // Ensure API routes are not statically optimized during build
+  // This prevents database connections during build time
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals = [...(config.externals || []), '@prisma/client', 'prisma']
+    }
+    return config
+  },
 };
 
 module.exports = nextConfig;

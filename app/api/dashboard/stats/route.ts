@@ -2,18 +2,23 @@
 import { NextResponse } from "next/server"
 import { getServerSession } from "next-auth/next"
 import { authOptions } from "@/lib/auth"
-import { prisma } from "@/lib/db"
+import { checkDatabaseAvailability, getPrismaClient } from "@/lib/api-helpers"
 
 export const dynamic = "force-dynamic"
 
 export async function GET() {
   try {
+    // Check database availability
+    const dbError = checkDatabaseAvailability()
+    if (dbError) return dbError
+
     const session = await getServerSession(authOptions)
     
     if (!session?.user?.id) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
     }
 
+    const prisma = getPrismaClient()
     const [
       totalClients,
       activeEngagements, 

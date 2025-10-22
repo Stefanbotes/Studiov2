@@ -1,12 +1,16 @@
 
 import { NextRequest, NextResponse } from "next/server"
-import { prisma } from "@/lib/db"
+import { checkDatabaseAvailability, getPrismaClient } from "@/lib/api-helpers"
 import bcrypt from "bcryptjs"
 
 export const dynamic = "force-dynamic"
 
 export async function POST(req: NextRequest) {
   try {
+    // Check database availability
+    const dbError = checkDatabaseAvailability()
+    if (dbError) return dbError
+
     const body = await req.json()
     const { email, password, firstName, lastName, role, license } = body
 
@@ -17,6 +21,7 @@ export async function POST(req: NextRequest) {
       )
     }
 
+    const prisma = getPrismaClient()
     const existingUser = await prisma.user.findUnique({
       where: { email }
     })

@@ -2,18 +2,23 @@
 import { NextResponse } from "next/server"
 import { getServerSession } from "next-auth/next"
 import { authOptions } from "@/lib/auth"
-import { prisma } from "@/lib/db"
+import { checkDatabaseAvailability, getPrismaClient } from "@/lib/api-helpers"
 
 export const dynamic = "force-dynamic"
 
 export async function GET() {
   try {
+    // Check database availability
+    const dbError = checkDatabaseAvailability()
+    if (dbError) return dbError
+
     const session = await getServerSession(authOptions)
     
     if (!session?.user?.id) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
     }
 
+    const prisma = getPrismaClient()
     const clients = await prisma.clientProfile.findMany({
       where: { userId: session.user.id },
       include: {
@@ -39,6 +44,10 @@ export async function GET() {
 
 export async function POST(req: Request) {
   try {
+    // Check database availability
+    const dbError = checkDatabaseAvailability()
+    if (dbError) return dbError
+
     const session = await getServerSession(authOptions)
     
     if (!session?.user?.id) {
@@ -64,6 +73,7 @@ export async function POST(req: Request) {
       )
     }
 
+    const prisma = getPrismaClient()
     const client = await prisma.clientProfile.create({
       data: {
         userId: session.user.id,

@@ -2,7 +2,7 @@
 import { NextRequest, NextResponse } from "next/server"
 import { getServerSession } from "next-auth/next"
 import { authOptions } from "@/lib/auth"
-import { prisma } from "@/lib/db"
+import { checkDatabaseAvailability, getPrismaClient } from "@/lib/api-helpers"
 
 export const dynamic = "force-dynamic"
 
@@ -11,14 +11,9 @@ export async function PUT(
   { params }: { params: { id: string } }
 ) {
   try {
-    // Verify database connection
-    if (!process.env.DATABASE_URL) {
-      console.error("DATABASE_URL not configured")
-      return NextResponse.json(
-        { error: "Database configuration error" },
-        { status: 500 }
-      )
-    }
+    // Check database availability
+    const dbError = checkDatabaseAvailability()
+    if (dbError) return dbError
 
     const session = await getServerSession(authOptions)
     
@@ -39,6 +34,8 @@ export async function PUT(
       isActive
     } = body
 
+    const prisma = getPrismaClient()
+    
     // Verify client ownership
     const existingClient = await prisma.clientProfile.findFirst({
       where: { 
@@ -89,14 +86,9 @@ export async function GET(
   { params }: { params: { id: string } }
 ) {
   try {
-    // Verify database connection
-    if (!process.env.DATABASE_URL) {
-      console.error("DATABASE_URL not configured")
-      return NextResponse.json(
-        { error: "Database configuration error" },
-        { status: 500 }
-      )
-    }
+    // Check database availability
+    const dbError = checkDatabaseAvailability()
+    if (dbError) return dbError
 
     const session = await getServerSession(authOptions)
     
@@ -104,6 +96,7 @@ export async function GET(
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
     }
 
+    const prisma = getPrismaClient()
     const client = await prisma.clientProfile.findFirst({
       where: { 
         id: params.id, 
