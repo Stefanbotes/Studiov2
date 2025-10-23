@@ -9,7 +9,7 @@ export default async function BridgePage() {
   const session = await getServerSession(authOptions)
 
   if (!session) {
-    redirect("/auth/signin")
+    redirect("/auth/login")
   }
 
   return <ClientBridgePage session={session} />

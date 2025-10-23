@@ -9,7 +9,7 @@ export default async function CoachingHubPage() {
   const session = await getServerSession(authOptions)
 
   if (!session) {
-    redirect("/auth/signin")
+    redirect("/auth/login")
   }
 
   return <ClientCoachingHub session={session} />

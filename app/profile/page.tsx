@@ -9,7 +9,7 @@ export default async function ProfilePage() {
   const session = await getServerSession(authOptions)
 
   if (!session) {
-    redirect("/auth/signin")
+    redirect("/auth/login")
   }
 
   return (
