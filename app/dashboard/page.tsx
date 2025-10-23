@@ -1,7 +1,12 @@
 
+
 import { getServerSession } from "next-auth/next"
 import { authOptions } from "@/lib/auth"
 import { DashboardOverview } from "@/components/dashboard-overview"
+
+// Force dynamic rendering - never statically optimize this page
+// This ensures session checks always happen at runtime, not build time
+export const dynamic = 'force-dynamic'
 
 export default async function DashboardPage() {
   const session = await getServerSession(authOptions)

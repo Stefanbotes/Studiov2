@@ -1,4 +1,5 @@
 
+
 "use client"
 
 import { useState } from "react"
@@ -30,12 +31,19 @@ export default function LoginPage() {
         url: window.location.href
       })
 
+      // IMPROVED: Use NextAuth's built-in redirect mechanism
+      // This is more reliable than manual client-side redirects
       const result = await signIn("credentials", {
         email,
         password,
-        redirect: false,
+        redirect: true,           // ✅ Let NextAuth handle the redirect
+        callbackUrl: "/dashboard" // ✅ Explicit redirect target
       })
 
+      // Note: If redirect is true, this code won't execute on success
+      // because NextAuth will redirect the browser
+      // This will only run if there's an error
+      
       console.log('🔐 Login result received:', {
         ok: result?.ok,
         error: result?.error,
@@ -66,29 +74,6 @@ export default function LoginPage() {
         } else {
           toast.error(`Authentication failed: ${result.error}`)
         }
-      } else if (result?.ok) {
-        console.log('✅ Login successful!', {
-          status: result.status,
-          url: result.url,
-          timestamp: new Date().toISOString()
-        })
-        toast.success("Welcome to Studio 2")
-        
-        console.log('⏳ Waiting for session cookie to propagate...')
-        // Wait longer to ensure session cookie is fully set and propagated
-        // This is critical for preventing redirect loops
-        await new Promise(resolve => setTimeout(resolve, 500))
-        
-        console.log('🔀 Redirecting to dashboard...')
-        // Use window.location for a hard redirect to ensure session is loaded
-        // This forces a full page reload with the new session cookie
-        window.location.href = "/dashboard"
-      } else {
-        console.error('❌ Unexpected login result:', {
-          result,
-          timestamp: new Date().toISOString()
-        })
-        toast.error("An unexpected error occurred. Please try again.")
       }
     } catch (error) {
       console.error('❌ Login exception:', {

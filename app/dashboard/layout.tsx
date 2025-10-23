@@ -1,8 +1,13 @@
 
+
 import { getServerSession } from "next-auth/next"
 import { authOptions } from "@/lib/auth"
 import { redirect } from "next/navigation"
 import { Header } from "@/components/header"
+
+// Force dynamic rendering - never statically optimize this layout
+// This ensures session checks always happen at runtime, not build time
+export const dynamic = 'force-dynamic'
 
 export default async function DashboardLayout({
   children,
@@ -15,14 +20,15 @@ export default async function DashboardLayout({
     hasSession: !!session,
     userEmail: session?.user?.email,
     userId: session?.user?.id,
+    timestamp: new Date().toISOString()
   })
 
   if (!session) {
-    console.log('⚠️  No session found, redirecting to login...')
+    console.log('⚠️  No session found in dashboard layout, redirecting to login...')
     redirect("/auth/login")
   }
 
-  console.log('✅ Session valid, rendering dashboard')
+  console.log('✅ Session valid, rendering dashboard for:', session.user.email)
 
   return (
     <div className="min-h-screen bg-gray-50">
