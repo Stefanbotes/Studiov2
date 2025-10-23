@@ -44,7 +44,9 @@ if (missingVars.length > 0) {
   console.error('⚠️  Authentication may not work correctly without these variables')
 }
 
-export const authOptions: NextAuthOptions = {
+// Type assertion to include trustHost property which exists in NextAuth v4 runtime
+// but may not be in the TypeScript type definitions for this version
+export const authOptions: NextAuthOptions & { trustHost?: boolean } = {
   adapter: PrismaAdapter(prisma),
   session: {
     strategy: "jwt",
