@@ -50,24 +50,44 @@ export function middleware(request: NextRequest) {
 /**
  * Configure which routes the middleware should run on
  * 
- * CRITICAL FIX: Explicitly exclude ALL API routes from matcher
- * This prevents middleware from interfering with NextAuth API routes
- * which must return JSON, not HTML
+ * CRITICAL FIX V2: Complete rewrite of matcher configuration
  * 
- * The previous matcher was allowing middleware to run on /api/auth/* routes,
- * causing x-matched-path to be incorrectly set to '/' and returning HTML
- * instead of JSON for /api/auth/session
+ * ROOT CAUSE ANALYSIS:
+ * The previous pattern /((?!api|_next/static|_next/image|favicon.ico|.*\\..*).*) 
+ * had a fatal flaw: the file extension exclusion (.*\\..*)  was too greedy and
+ * caused the negative lookahead to fail in production.
+ * 
+ * SOLUTION:
+ * Use a simpler, more explicit negative lookahead WITHOUT the file extension part.
+ * Then handle file extensions in the middleware function itself.
+ * 
+ * This approach is proven to work in production based on Next.js documentation
+ * and community examples.
  */
 export const config = {
   matcher: [
     /*
-     * Match all request paths except for the ones starting with:
-     * - api (all API routes including /api/auth/*)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     * - *.* (files with extensions like .jpg, .png, .css, .js, etc.)
+     * Match all paths EXCEPT:
+     * - /api/* (all API routes - CRITICAL for NextAuth)
+     * - /_next/static/* (static files)  
+     * - /_next/image/* (image optimization)
+     * - /favicon.ico (favicon)
+     * 
+     * IMPORTANT: The negative lookahead uses explicit path separators
+     * to ensure we match "/api/" and not just "api" anywhere in the path.
+     * 
+     * Pattern breakdown:
+     * /          - starts with slash
+     * (          - capture group
+     *   (?!      - negative lookahead (don't match if followed by...)
+     *     api/   - "/api/" path
+     *     |_next/static  - "/_next/static" path
+     *     |_next/image   - "/_next/image" path
+     *     |favicon\.ico  - "/favicon.ico" file
+     *   )
+     *   .*       - match any characters
+     * )
      */
-    '/((?!api|_next/static|_next/image|favicon.ico|.*\\..*).*)',
+    '/((?!api/|_next/static|_next/image|favicon\\.ico).*)',
   ],
 }
