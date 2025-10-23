@@ -9,6 +9,10 @@ import bcrypt from "bcryptjs"
 const requiredEnvVars = {
   DATABASE_URL: process.env.DATABASE_URL,
   NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
+}
+
+// Optional environment variables (will use trustHost if not set)
+const optionalEnvVars = {
   NEXTAUTH_URL: process.env.NEXTAUTH_URL,
 }
 
@@ -22,13 +26,21 @@ Object.entries(requiredEnvVars).forEach(([key, value]) => {
   }
 })
 
-// Warn about missing environment variables
+Object.entries(optionalEnvVars).forEach(([key, value]) => {
+  if (!value) {
+    console.log(`ℹ️  ${key} not set - using trustHost (auto-detect from request)`)
+  } else {
+    console.log(`✅ ${key} is configured`)
+  }
+})
+
+// Warn about missing REQUIRED environment variables only
 const missingVars = Object.entries(requiredEnvVars)
   .filter(([_, value]) => !value)
   .map(([key]) => key)
 
 if (missingVars.length > 0) {
-  console.error(`⚠️  WARNING: Missing environment variables: ${missingVars.join(', ')}`)
+  console.error(`⚠️  WARNING: Missing REQUIRED environment variables: ${missingVars.join(', ')}`)
   console.error('⚠️  Authentication may not work correctly without these variables')
 }
 
@@ -42,6 +54,11 @@ export const authOptions: NextAuthOptions = {
     signIn: "/auth/login",
     error: "/auth/error", // Send to custom error page with logging
   },
+  // CRITICAL FIX: Trust the host header when NEXTAUTH_URL is not set
+  // This allows NextAuth to work correctly on Vercel without hardcoding the URL
+  // The host header will be automatically detected from the request
+  useSecureCookies: process.env.NODE_ENV === "production",
+  trustHost: true, // Required for Vercel deployments and dynamic URLs
   providers: [
     CredentialsProvider({
       name: "credentials",
