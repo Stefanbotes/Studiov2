@@ -7,6 +7,9 @@ import { authOptions } from "@/lib/auth"
 import { bridgeUserAssessments, bridgeAssessmentToHub } from "@/lib/utils/bridge-assessment-to-hub"
 import { listCoacheeProfiles, hasCoacheeProfile } from "@/lib/services/coachee-profiles"
 
+// Force dynamic rendering for this route
+export const dynamic = "force-dynamic"
+
 export async function POST(request: Request) {
   try {
     const session = await getServerSession(authOptions)
