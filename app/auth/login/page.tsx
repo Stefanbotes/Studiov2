@@ -45,10 +45,12 @@ export default function LoginPage() {
         console.log('✅ Login successful, redirecting to dashboard...')
         toast.success("Welcome to Studio 2")
         
-        // Small delay to ensure session is fully established
-        await new Promise(resolve => setTimeout(resolve, 100))
+        // Wait longer to ensure session cookie is fully set and propagated
+        // This is critical for preventing redirect loops
+        await new Promise(resolve => setTimeout(resolve, 500))
         
         // Use window.location for a hard redirect to ensure session is loaded
+        // This forces a full page reload with the new session cookie
         window.location.href = "/dashboard"
       } else {
         console.error('❌ Unexpected login result:', result)
