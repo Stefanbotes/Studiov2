@@ -2,12 +2,13 @@
 
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 import { AlertCircle, Home, LogIn } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 
-export default function AuthErrorPage() {
+// Separate component that uses useSearchParams
+function AuthErrorContent() {
   const searchParams = useSearchParams()
   const [errorDetails, setErrorDetails] = useState<{
     error: string | null
@@ -139,5 +140,31 @@ export default function AuthErrorPage() {
         </Card>
       </div>
     </div>
+  )
+}
+
+// Loading fallback component
+function ErrorPageLoading() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-orange-50 flex items-center justify-center p-4">
+      <div className="w-full max-w-md">
+        <div className="text-center mb-8">
+          <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
+            <AlertCircle className="h-8 w-8 text-red-600" />
+          </div>
+          <h1 className="text-2xl font-bold text-gray-900">Authentication Error</h1>
+          <p className="text-gray-600 mt-2">Loading error details...</p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// Main page component with Suspense boundary
+export default function AuthErrorPage() {
+  return (
+    <Suspense fallback={<ErrorPageLoading />}>
+      <AuthErrorContent />
+    </Suspense>
   )
 }
