@@ -50,17 +50,24 @@ export function middleware(request: NextRequest) {
 /**
  * Configure which routes the middleware should run on
  * 
- * IMPORTANT: We use a matcher to be explicit about which routes to check
- * This ensures middleware doesn't accidentally interfere with API routes
+ * CRITICAL FIX: Explicitly exclude ALL API routes from matcher
+ * This prevents middleware from interfering with NextAuth API routes
+ * which must return JSON, not HTML
+ * 
+ * The previous matcher was allowing middleware to run on /api/auth/* routes,
+ * causing x-matched-path to be incorrectly set to '/' and returning HTML
+ * instead of JSON for /api/auth/session
  */
 export const config = {
   matcher: [
     /*
      * Match all request paths except for the ones starting with:
+     * - api (all API routes including /api/auth/*)
      * - _next/static (static files)
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
+     * - *.* (files with extensions like .jpg, .png, .css, .js, etc.)
      */
-    '/((?!_next/static|_next/image|favicon.ico).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico|.*\\..*).*)',
   ],
 }
