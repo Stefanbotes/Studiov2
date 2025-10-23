@@ -175,8 +175,9 @@ export const authOptions: NextAuthOptions = {
       }
     },
     async redirect({ url, baseUrl }) {
-      console.log('🔀 Redirect callback - url:', url, 'baseUrl:', baseUrl)
+      console.log('🔀 Redirect callback:', { url, baseUrl })
       
+      // After sign in, always redirect to dashboard
       // Allows relative callback URLs
       if (url.startsWith("/")) {
         return `${baseUrl}${url}`
@@ -185,7 +186,8 @@ export const authOptions: NextAuthOptions = {
       else if (new URL(url).origin === baseUrl) {
         return url
       }
-      return baseUrl
+      // Default to dashboard after successful sign in
+      return `${baseUrl}/dashboard`
     },
   },
   // Enable debug mode to get more detailed logs
