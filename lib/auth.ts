@@ -36,9 +36,11 @@ export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
   session: {
     strategy: "jwt",
+    maxAge: 30 * 24 * 60 * 60, // 30 days
   },
   pages: {
     signIn: "/auth/login",
+    error: "/auth/login", // Redirect to login on error
   },
   providers: [
     CredentialsProvider({
@@ -130,16 +132,22 @@ export const authOptions: NextAuthOptions = {
     })
   ],
   callbacks: {
-    session: ({ session, token }) => {
+    async session({ session, token }) {
       try {
+        console.log('🔄 Session callback - Creating session with token:', {
+          hasToken: !!token,
+          tokenId: token.id,
+          sessionUserEmail: session?.user?.email
+        })
+        
         return {
           ...session,
           user: {
             ...session.user,
-            id: token.id,
-            role: token.role,
-            license: token.license,
-            organization: token.organization,
+            id: token.id as string,
+            role: token.role as string,
+            license: token.license as string,
+            organization: token.organization as string,
           },
         }
       } catch (error) {
@@ -147,9 +155,10 @@ export const authOptions: NextAuthOptions = {
         return session
       }
     },
-    jwt: ({ token, user }) => {
+    async jwt({ token, user, account }) {
       try {
         if (user) {
+          console.log('🎫 JWT callback - Creating token for user:', user.email)
           const u = user as any
           return {
             ...token,
@@ -164,6 +173,19 @@ export const authOptions: NextAuthOptions = {
         console.error('❌ JWT callback error:', error)
         return token
       }
+    },
+    async redirect({ url, baseUrl }) {
+      console.log('🔀 Redirect callback - url:', url, 'baseUrl:', baseUrl)
+      
+      // Allows relative callback URLs
+      if (url.startsWith("/")) {
+        return `${baseUrl}${url}`
+      }
+      // Allows callback URLs on the same origin
+      else if (new URL(url).origin === baseUrl) {
+        return url
+      }
+      return baseUrl
     },
   },
   // Enable debug mode to get more detailed logs

@@ -32,7 +32,7 @@ export default function LoginPage() {
 
       if (result?.error) {
         // Show specific error message
-        console.error('Login error:', result.error)
+        console.error('❌ Login error:', result.error)
         
         if (result.error === 'CredentialsSignin') {
           toast.error("Invalid email or password. Please try again.")
@@ -42,10 +42,16 @@ export default function LoginPage() {
           toast.error(`Authentication failed: ${result.error}`)
         }
       } else if (result?.ok) {
+        console.log('✅ Login successful, redirecting to dashboard...')
         toast.success("Welcome to Studio 2")
-        router.push("/dashboard")
-        router.refresh() // Refresh to update session
+        
+        // Small delay to ensure session is fully established
+        await new Promise(resolve => setTimeout(resolve, 100))
+        
+        // Use window.location for a hard redirect to ensure session is loaded
+        window.location.href = "/dashboard"
       } else {
+        console.error('❌ Unexpected login result:', result)
         toast.error("An unexpected error occurred. Please try again.")
       }
     } catch (error) {

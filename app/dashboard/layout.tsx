@@ -11,9 +11,18 @@ export default async function DashboardLayout({
 }) {
   const session = await getServerSession(authOptions)
 
+  console.log('🔐 Dashboard Layout - Session check:', {
+    hasSession: !!session,
+    userEmail: session?.user?.email,
+    userId: session?.user?.id,
+  })
+
   if (!session) {
+    console.log('⚠️  No session found, redirecting to login...')
     redirect("/auth/login")
   }
+
+  console.log('✅ Session valid, rendering dashboard')
 
   return (
     <div className="min-h-screen bg-gray-50">
