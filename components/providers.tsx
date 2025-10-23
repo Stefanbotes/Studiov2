@@ -18,8 +18,6 @@ export function Providers({ children }: { children: React.ReactNode }) {
         defaultTheme="light"
         enableSystem
         disableTransitionOnChange
-        // Suppress hydration warning for theme switching
-        suppressHydrationWarning
       >
         {children}
         <Toaster position="top-right" />
