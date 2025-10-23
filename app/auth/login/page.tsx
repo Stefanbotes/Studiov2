@@ -31,13 +31,26 @@ export default function LoginPage() {
       })
 
       if (result?.error) {
-        toast.error("Invalid credentials")
-      } else {
+        // Show specific error message
+        console.error('Login error:', result.error)
+        
+        if (result.error === 'CredentialsSignin') {
+          toast.error("Invalid email or password. Please try again.")
+        } else if (result.error.includes('database') || result.error.includes('Database')) {
+          toast.error("Database connection error. Please contact support.")
+        } else {
+          toast.error(`Authentication failed: ${result.error}`)
+        }
+      } else if (result?.ok) {
         toast.success("Welcome to Studio 2")
         router.push("/dashboard")
+        router.refresh() // Refresh to update session
+      } else {
+        toast.error("An unexpected error occurred. Please try again.")
       }
     } catch (error) {
-      toast.error("An error occurred during login")
+      console.error('Login exception:', error)
+      toast.error("An error occurred during login. Please try again.")
     } finally {
       setIsLoading(false)
     }
