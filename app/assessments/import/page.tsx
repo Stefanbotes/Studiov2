@@ -1,7 +1,7 @@
 
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, Suspense } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -20,7 +20,8 @@ interface ClientProfile {
   email: string | null
 }
 
-export default function AssessmentImportPage() {
+// Separate component that uses useSearchParams
+function AssessmentImportContent() {
   const [clients, setClients] = useState<ClientProfile[]>([])
   const [selectedClient, setSelectedClient] = useState("")
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
@@ -336,5 +337,26 @@ export default function AssessmentImportPage() {
         </CardContent>
       </Card>
     </div>
+  )
+}
+
+// Loading fallback component
+function ImportPageLoading() {
+  return (
+    <div className="max-w-2xl mx-auto">
+      <div className="animate-pulse space-y-4">
+        <div className="h-8 bg-gray-200 rounded w-1/2"></div>
+        <div className="h-32 bg-gray-200 rounded"></div>
+      </div>
+    </div>
+  )
+}
+
+// Main page component with Suspense boundary
+export default function AssessmentImportPage() {
+  return (
+    <Suspense fallback={<ImportPageLoading />}>
+      <AssessmentImportContent />
+    </Suspense>
   )
 }
