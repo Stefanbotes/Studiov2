@@ -40,7 +40,7 @@ export const authOptions: NextAuthOptions = {
   },
   pages: {
     signIn: "/auth/login",
-    error: "/auth/login", // Redirect to login on error
+    error: "/auth/error", // Send to custom error page with logging
   },
   providers: [
     CredentialsProvider({
@@ -132,13 +132,41 @@ export const authOptions: NextAuthOptions = {
     })
   ],
   callbacks: {
+    async signIn({ user, account, profile, email, credentials }) {
+      try {
+        console.log('🔐 SignIn callback triggered:', {
+          hasUser: !!user,
+          userId: user?.id,
+          userEmail: user?.email,
+          hasAccount: !!account,
+          accountProvider: account?.provider,
+          hasCredentials: !!credentials,
+          timestamp: new Date().toISOString()
+        })
+        
+        // Always allow sign in - any issues should be caught by authorize()
+        return true
+      } catch (error) {
+        console.error('❌ SignIn callback error:', error)
+        console.error('❌ SignIn callback error stack:', error instanceof Error ? error.stack : 'No stack trace')
+        // Return false to prevent sign in if there's an error
+        return false
+      }
+    },
     async session({ session, token }) {
       try {
         console.log('🔄 Session callback - Creating session with token:', {
           hasToken: !!token,
           tokenId: token.id,
-          sessionUserEmail: session?.user?.email
+          sessionUserEmail: session?.user?.email,
+          tokenSub: token.sub,
+          timestamp: new Date().toISOString()
         })
+        
+        // Validate that token has required fields
+        if (!token.id) {
+          console.error('❌ Session callback: Token missing id field')
+        }
         
         return {
           ...session,
@@ -152,46 +180,74 @@ export const authOptions: NextAuthOptions = {
         }
       } catch (error) {
         console.error('❌ Session callback error:', error)
+        console.error('❌ Session callback error stack:', error instanceof Error ? error.stack : 'No stack trace')
         return session
       }
     },
-    async jwt({ token, user, account }) {
+    async jwt({ token, user, account, trigger }) {
       try {
+        console.log('🎫 JWT callback triggered:', {
+          hasUser: !!user,
+          userEmail: user?.email,
+          hasToken: !!token,
+          tokenSub: token.sub,
+          trigger: trigger,
+          timestamp: new Date().toISOString()
+        })
+        
         if (user) {
           console.log('🎫 JWT callback - Creating token for user:', user.email)
           const u = user as any
-          return {
+          const newToken = {
             ...token,
             id: u.id,
             role: u.role,
             license: u.license,
             organization: u.organization,
           }
+          console.log('✅ JWT callback - Token created with fields:', Object.keys(newToken))
+          return newToken
         }
+        
+        console.log('🎫 JWT callback - Returning existing token')
         return token
       } catch (error) {
         console.error('❌ JWT callback error:', error)
+        console.error('❌ JWT callback error stack:', error instanceof Error ? error.stack : 'No stack trace')
         return token
       }
     },
     async redirect({ url, baseUrl }) {
-      console.log('🔀 Redirect callback:', { url, baseUrl })
+      console.log('🔀 Redirect callback triggered:', { 
+        url, 
+        baseUrl,
+        urlStartsWithSlash: url.startsWith("/"),
+        urlOrigin: url.startsWith("http") ? new URL(url).origin : 'N/A',
+        baseUrlMatches: url.startsWith("http") ? (new URL(url).origin === baseUrl) : false,
+        timestamp: new Date().toISOString()
+      })
       
       // After sign in, always redirect to dashboard
       // Allows relative callback URLs
       if (url.startsWith("/")) {
-        return `${baseUrl}${url}`
+        const redirectUrl = `${baseUrl}${url}`
+        console.log('🔀 Redirect: Using relative URL, redirecting to:', redirectUrl)
+        return redirectUrl
       }
       // Allows callback URLs on the same origin
       else if (new URL(url).origin === baseUrl) {
+        console.log('🔀 Redirect: Same origin, redirecting to:', url)
         return url
       }
       // Default to dashboard after successful sign in
-      return `${baseUrl}/dashboard`
+      const defaultUrl = `${baseUrl}/dashboard`
+      console.log('🔀 Redirect: Using default dashboard URL:', defaultUrl)
+      return defaultUrl
     },
   },
   // Enable debug mode to get more detailed logs
-  debug: process.env.NODE_ENV === 'development',
+  // TEMPORARILY enabled in production for debugging redirect loop
+  debug: true,
   // Add custom error handling
   events: {
     async signIn(message) {

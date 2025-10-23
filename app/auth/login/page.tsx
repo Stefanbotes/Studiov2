@@ -24,40 +24,79 @@ export default function LoginPage() {
     setIsLoading(true)
 
     try {
+      console.log('🔐 Login attempt starting...', {
+        email,
+        timestamp: new Date().toISOString(),
+        url: window.location.href
+      })
+
       const result = await signIn("credentials", {
         email,
         password,
         redirect: false,
       })
 
+      console.log('🔐 Login result received:', {
+        ok: result?.ok,
+        error: result?.error,
+        status: result?.status,
+        url: result?.url,
+        timestamp: new Date().toISOString()
+      })
+
       if (result?.error) {
         // Show specific error message
-        console.error('❌ Login error:', result.error)
+        console.error('❌ Login error details:', {
+          error: result.error,
+          status: result.status,
+          url: result.url,
+          timestamp: new Date().toISOString()
+        })
         
         if (result.error === 'CredentialsSignin') {
           toast.error("Invalid email or password. Please try again.")
         } else if (result.error.includes('database') || result.error.includes('Database')) {
           toast.error("Database connection error. Please contact support.")
+        } else if (result.error === 'Configuration') {
+          console.error('🚨 CONFIGURATION ERROR: Check NEXTAUTH_URL and NEXTAUTH_SECRET in Vercel')
+          toast.error("Server configuration error. Please contact support.")
+        } else if (result.error === 'Callback') {
+          console.error('🚨 CALLBACK ERROR: Possible redirect loop detected')
+          toast.error("Authentication callback error. Please contact support.")
         } else {
           toast.error(`Authentication failed: ${result.error}`)
         }
       } else if (result?.ok) {
-        console.log('✅ Login successful, redirecting to dashboard...')
+        console.log('✅ Login successful!', {
+          status: result.status,
+          url: result.url,
+          timestamp: new Date().toISOString()
+        })
         toast.success("Welcome to Studio 2")
         
+        console.log('⏳ Waiting for session cookie to propagate...')
         // Wait longer to ensure session cookie is fully set and propagated
         // This is critical for preventing redirect loops
         await new Promise(resolve => setTimeout(resolve, 500))
         
+        console.log('🔀 Redirecting to dashboard...')
         // Use window.location for a hard redirect to ensure session is loaded
         // This forces a full page reload with the new session cookie
         window.location.href = "/dashboard"
       } else {
-        console.error('❌ Unexpected login result:', result)
+        console.error('❌ Unexpected login result:', {
+          result,
+          timestamp: new Date().toISOString()
+        })
         toast.error("An unexpected error occurred. Please try again.")
       }
     } catch (error) {
-      console.error('Login exception:', error)
+      console.error('❌ Login exception:', {
+        error,
+        errorMessage: error instanceof Error ? error.message : 'Unknown',
+        errorStack: error instanceof Error ? error.stack : 'No stack trace',
+        timestamp: new Date().toISOString()
+      })
       toast.error("An error occurred during login. Please try again.")
     } finally {
       setIsLoading(false)
