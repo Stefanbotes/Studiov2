@@ -359,3 +359,14 @@ model Mode {
   @@index([category])
   @@index([type])
 }
+model CoacheeProfile {
+  id        String   @id @default(cuid())
+  coacheeId String   @unique        // the external/stable ID you use (e.g., "cmh4iqbfy...")
+  data      Json                      // the full canonical JSON from NLPQ
+  version   Int      @default(1)      // optional: bump on each write
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Optional: relate to an existing client row if you want
+  // client    ClientProfile? @relation(fields: [coacheeId], references: [id])
+}
